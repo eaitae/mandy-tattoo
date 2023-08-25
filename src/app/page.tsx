@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { type } from 'os'
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
 
 function Header() {
   return (
-    <header className="relative h-screen w-screen ">
+    <header className="relative h-screen w-screen">
       <nav className="flex pt-16">
         <Image
           className="w-[45vw]"

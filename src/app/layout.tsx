@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Ubuntu } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400'] })
 
 export const metadata: Metadata = {
   title: 'Mandy Tattoo',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className="dark">
-      <body className={cn(inter.className, 'w-screen overflow-x-hidden')}>
+      <body className={cn(ubuntu.className, 'w-screen overflow-x-hidden')}>
         {children}
       </body>
     </html>
