@@ -1,10 +1,13 @@
 import { cn } from '@/lib/utils'
 import * as Icons from 'lucide-react'
 import Image from 'next/image'
+import { Slider } from './slider'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col gap-10">
       <Header />
       <section>
         <Indication posX="left" posY="upper" />
@@ -13,12 +16,20 @@ export default function Home() {
         <Indication posX="right" posY="lower" />
       </section>
       <section className="flex flex-col gap-10 px-40">
-        <header>
-          <h2 className="flex gap-2 text-2xl">
-            <span className="grow">Conheça o meu trabalho...</span>
-            <Icons.Instagram size="2rem" />
-            <span>@mandytattoo</span>
+        <header className="flex items-end gap-2">
+          <h2 className="grow text-4xl">
+            Conheça o meu <span className="text-primary">trabalho</span>...
           </h2>
+
+          <Button asChild variant="link">
+            <Link
+              href="https://www.instagram.com/mandytattoodf/"
+              target="_blank"
+            >
+              <Icons.Instagram className="mr-2 inline" size="2rem" />
+              <span className="text-2xl text-foreground">@mandytattoo</span>
+            </Link>
+          </Button>
         </header>
         <div className="grid grid-cols-3 gap-4">
           {/* TODO: adjust alts */}
@@ -32,6 +43,16 @@ export default function Home() {
           <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
           <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
         </div>
+      </section>
+
+      <section className="flex flex-col items-center px-40">
+        <Slider />
+        <Button
+          variant="outline"
+          className="mt-20 h-16 w-64 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
+        >
+          Quero agendar!
+        </Button>
       </section>
     </div>
   )
