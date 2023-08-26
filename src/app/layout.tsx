@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className="dark">
-      <body className={cn(ubuntu.className, 'w-screen overflow-x-hidden')}>
+      <body className={cn(ubuntu.className, 'w-screen max-w-full')}>
         {children}
       </body>
     </html>
