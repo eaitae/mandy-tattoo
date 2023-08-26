@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { Slider } from './slider'
 import { Faq } from './faq'
+import Link from 'next/link'
 
 export default function CursoPage() {
   return (
@@ -21,10 +22,13 @@ export default function CursoPage() {
             que sempre sonhou!
           </p>
           <Button
+            asChild
             variant="outline"
             className="mt-20 h-16 w-60 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
           >
-            Quero ser tatuador!
+            <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
+              Quero ser tatuador!
+            </Link>
           </Button>
         </div>
         <Image
@@ -122,10 +126,13 @@ export default function CursoPage() {
         </div>
         <div className="flex justify-center space-x-4">
           <Button
+            asChild
             variant="outline"
             className="mt-20 h-16 w-64 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
           >
-            Quero este bônus!
+            <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
+              Quero esse bônus!
+            </Link>
           </Button>
         </div>
         <Image
@@ -165,10 +172,13 @@ export default function CursoPage() {
             <span className="text-[#CEE130]">perfeito para você</span>!
           </p>
           <Button
+            asChild
             variant="outline"
             className="mt-20 h-16 w-64 border-2 border-[#D048CD] p-4 text-[1.4rem] font-bold text-[#D048CD] transition duration-300 hover:bg-[#D048CD] hover:text-white"
           >
-            Quero me inscrever!
+            <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
+              Quero me inscrever!
+            </Link>
           </Button>
         </div>
         <Image
@@ -181,7 +191,7 @@ export default function CursoPage() {
       </div>
 
       <div className="flex flex-col items-center justify-center space-y-8 p-8">
-        <h1 className="mx-52 px-40 text-center text-[3rem] font-bold">
+        <h1 className="mx-72 px-60 text-center text-[2.5rem] font-bold">
           Esses são alguns dos{' '}
           <span className="text-[#D048CD]">resultados</span> dos meus alunos
           durante nosso curso:
@@ -196,10 +206,13 @@ export default function CursoPage() {
 
         <div className="flex justify-center space-x-4">
           <Button
+            asChild
             variant="outline"
             className="mt-10 h-16 w-64 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
           >
-            Quero ser aluno!
+            <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
+              Quero ser aluno!
+            </Link>
           </Button>
         </div>
       </div>
@@ -232,8 +245,13 @@ export default function CursoPage() {
             profissão esteja em boas mãos.
           </p>
 
-          <Button className=" h-16 w-64 border-2 bg-[#CEE130] p-4 text-[1.4rem] font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white">
-            Entrar em contato
+          <Button
+            asChild
+            className=" h-16 w-64 border-2 bg-[#CEE130] p-4 text-[1.4rem] font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white"
+          >
+            <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
+              Entrar em contato
+            </Link>
           </Button>
         </div>
 
@@ -248,7 +266,7 @@ export default function CursoPage() {
       </div>
 
       <div className="flex h-fit w-screen px-52 pt-20">
-        <div className="relative flex-1 pb-10 pt-10">
+        <div className="relative flex-1 pb-60 pt-60">
           <Image
             src="/mandy-pink-bg.png"
             alt="Mandy tatuando"
@@ -283,10 +301,13 @@ export default function CursoPage() {
             jornada como um tatuador de sucesso.
           </p>
           <Button
+            asChild
             variant="outline"
             className="mt-20 h-16 w-60 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
           >
-            Quero ser tatuador!
+            <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
+              Quero ser tatuador!
+            </Link>
           </Button>
         </div>
         <Image

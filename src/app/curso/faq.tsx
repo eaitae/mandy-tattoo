@@ -60,7 +60,7 @@ export function Faq() {
           dificuldade nessa parte, pode me chamar que irei te ajudar!
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-5">
+      <AccordionItem value="item-6">
         <AccordionTrigger>
           Como funciona a assistência online após o curso?
         </AccordionTrigger>
@@ -69,6 +69,25 @@ export function Faq() {
           dúvida que tenha no período de 2 meses. Sejam dúvidas técnicas, sobre
           divulgação do seu trabalho, feedbacks. Estarei aqui para te acompanhar
           e impulsionar no começo da sua jornada!
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-7">
+        <AccordionTrigger>Como funciona a inscrição?</AccordionTrigger>
+        <AccordionContent>
+          A inscrição é feita diretamente comigo através do instagram! Ao clicar
+          em qualquer um dos botões, você será redirecionado para a minha caixa
+          de mensagens, então é só me mandar um oi e dizer que está interessado
+          no curso que eu irei te explicar tudo que precisa saber!
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-8">
+        <AccordionTrigger>
+          Por que quando clico para me inscrever, sou direcionado a DM do
+          instagram?
+        </AccordionTrigger>
+        <AccordionContent>
+          As inscrições são realizadas diretamente comigo, por isso você é
+          direcionado à minha caixa de mensagens!
         </AccordionContent>
       </AccordionItem>
     </Accordion>
