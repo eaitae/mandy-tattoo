@@ -1,6 +1,6 @@
 'use client'
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
+import { Navigation, Pagination, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import * as Icons from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -32,12 +32,11 @@ export function Slider() {
   return (
     <Swiper
       className={styles.slider}
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
     >
       {data.map(({ text, author, rate }) => (
         <SwiperSlide key={author}>
