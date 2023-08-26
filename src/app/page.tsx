@@ -5,6 +5,11 @@ import { Slider } from './slider'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
+const works = Array.from(
+  { length: 9 },
+  (_, i) => `/work-${String(i + 1).padStart(3, '0')}.jpg`,
+)
+
 export default function Home() {
   return (
     <div className="flex w-full flex-col gap-10">
@@ -50,17 +55,18 @@ export default function Home() {
               </Link>
             </Button>
           </header>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 grid-rows-3 gap-6">
             {/* TODO: adjust alts */}
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
-            <Image src="/work-001.jpg" alt="..." width={2861} height={3603} />
+            {works.map((work) => (
+              <Image
+                className="aspect-[9/10] w-full object-cover"
+                key={work}
+                src={work}
+                alt="..."
+                width={2861}
+                height={3603}
+              />
+            ))}
           </div>
         </section>
 
@@ -117,7 +123,7 @@ function Header() {
           priority
         />
 
-        <ul className="topcase flex justify-end gap-8 px-16 align-middle text-2xl">
+        <ul className="flex justify-end gap-8 px-16 align-middle text-2xl uppercase">
           <li>Home</li>
           <li>Orçamentos</li>
           <li>Mentoria</li>
