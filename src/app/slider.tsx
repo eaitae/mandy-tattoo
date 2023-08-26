@@ -44,16 +44,16 @@ export function Slider() {
     >
       {data.map(({ text, author, rate }) => (
         <SwiperSlide key={author}>
-          <Card className="h-[300px] w-6/12 text-left">
-            <CardContent>
+          <Card className="h-[300px] w-6/12 bg-[#f7f9f6] text-left text-2xl text-background">
+            <CardContent className="flex h-full flex-col justify-around">
               <p>{text}</p>
-              <p>- {author}</p>
+              <p className="font-bold">- {author}</p>
               <div className="flex justify-center">
                 {ratings.map((ratePosition) => (
                   <Icons.Star
                     key={author + ratePosition}
                     color="#d048cd"
-                    fill={rate >= ratePosition ? '#d048cd' : undefined}
+                    fill={rate >= ratePosition ? '#d048cd' : '#f7f9f6'}
                   />
                 ))}
               </div>
