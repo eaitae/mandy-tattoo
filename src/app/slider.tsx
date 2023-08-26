@@ -12,7 +12,11 @@ import 'swiper/css/scrollbar'
 
 import styles from './slider.module.css'
 
-type Data = { text: string; author: string; rate: 1 | 2 | 3 | 4 | 5 }
+type Data = {
+  text: string
+  author: string
+  rate: 1 | 2 | 3 | 4 | 5
+}
 const data: Data[] = [
   {
     text: '"A Mandy é uma excelente profissional e muito atenciosa! Tanto ela quanto a Jess me recepcionaram muito bem e explicaram detalhadamente tudo sobre o processo e sobre os cuidados. As artes que ela cria são incríveis, recomendo bastante para quem curte  tatuagens geek, animes, etc."',

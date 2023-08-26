@@ -10,11 +10,27 @@ export default function Home() {
     <div className="flex w-full flex-col gap-10">
       <Header />
 
-      <section>
-        <Indication posX="left" posY="upper" />
-        <Indication posX="right" posY="upper" />
-        <Indication posX="right" posY="lower" />
-        <Indication posX="right" posY="lower" />
+      <section className="-mt-64 flex flex-col gap-16">
+        <Indication
+          posX="right"
+          posY="bot"
+          text="Especialista em tatuagens de anime e temática oriental"
+        />
+        <Indication
+          posX="left"
+          posY="top"
+          text="Tatuagens exclusivas e personalizadas especialmente para você"
+        />
+        <Indication
+          posX="right"
+          posY="top"
+          text="Estúdio privado pensado para o seu conforto"
+        />
+        <Indication
+          posX="left"
+          posY="bot"
+          text="Utilização de técnicas modernas e dos melhores materiais disponíveis no mercado"
+        />
       </section>
 
       <div className="flex flex-col gap-20 px-40">
@@ -101,7 +117,7 @@ function Header() {
           priority
         />
 
-        <ul className="flex justify-end gap-8 px-16 align-middle text-2xl uppercase">
+        <ul className="topcase flex justify-end gap-8 px-16 align-middle text-2xl">
           <li>Home</li>
           <li>Orçamentos</li>
           <li>Mentoria</li>
@@ -123,21 +139,30 @@ function Header() {
 
 type IndicationProps = {
   posX: 'left' | 'right'
-  posY: 'lower' | 'upper'
+  posY: 'bot' | 'top'
+  text: string
 }
 
-function Indication({ posX, posY }: IndicationProps) {
-  const alignItems = posY === 'lower' ? 'items-end' : 'items-start'
+function Indication({ posX, posY, text }: IndicationProps) {
+  const alignItems = posY === 'bot' ? 'items-end' : 'items-start'
 
   return (
     <div
-      className={cn(`flex w-full flex-wrap ${alignItems} justify-end gap-4`, {
+      className={cn(`flex w-full ${alignItems} w-6/12 justify-end gap-4`, {
         'flex-row-reverse': posX === 'left',
+        'self-end': posX === 'right',
       })}
     >
-      Especialista em tatuagens de anime e temática oriental
+      <p
+        className={cn('text-2xl', {
+          'mt-3': posY === 'top',
+          'mb-3': posY === 'bot',
+        })}
+      >
+        {text}
+      </p>
       <Image
-        src={`/${posY}-${posX}-indicator.svg`}
+        src={`/${posY}-${posX}-indicator.png`}
         alt="Indicador textual"
         width={368.6}
         height={77.6}
