@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function CursoPage() {
   return (
     <>
-      <div className="relative h-screen w-screen bg-[#060606]">
+      <div className="relative h-screen w-screen">
         <div className="relative z-10 w-[50vw] p-4 pl-40 pt-40">
           <h1 className="mb-8 text-[3.5rem] font-bold">
             Sua jornada como <span className="text-[#CEE130]">tatuador</span>{' '}
@@ -22,8 +22,7 @@ export default function CursoPage() {
             variant="outline"
             className="mt-20 h-16 w-60 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
           >
-            {' '}
-            Quero ser tatuador!{' '}
+            Quero ser tatuador!
           </Button>
         </div>
         <Image
@@ -36,8 +35,8 @@ export default function CursoPage() {
         />
       </div>
 
-      <div className="relative h-screen w-screen bg-[#060606]">
-        <div className="flex justify-center space-x-4 bg-[#060606] px-40">
+      <div className="relative h-screen w-screen">
+        <div className="flex justify-center space-x-4 px-40">
           <div className="flex h-full flex-col items-center justify-center p-20">
             <Image
               src="/icone-ink.png"
@@ -124,8 +123,7 @@ export default function CursoPage() {
             variant="outline"
             className="mt-20 h-16 w-64 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
           >
-            {' '}
-            Quero esse bônus!{' '}
+            Quero este bônus!
           </Button>
         </div>
         <Image
@@ -137,7 +135,7 @@ export default function CursoPage() {
         />
       </div>
 
-      <div className="relative h-screen w-screen bg-[#060606]">
+      <div className="relative h-screen w-screen">
         <div className="relative z-10 w-[50vw] p-4 pl-40 pt-40">
           <h1 className="mb-8 text-[3.5rem] font-bold">
             Se <span className="text-[#CEE130]">você</span>...
@@ -147,12 +145,12 @@ export default function CursoPage() {
             <br />
             <li>
               Não sabe qual profissão seguir, mas gosta de tatuagem e quer se
-              tornar independente através do próprio trabalho{' '}
+              tornar independente através do próprio trabalho
             </li>
             <br />
             <li>
               Tem noção básica de desenho e quer dar o primeiro passo para uma
-              carreira de sucesso{' '}
+              carreira de sucesso
             </li>
             <br />
             <li>
@@ -168,8 +166,7 @@ export default function CursoPage() {
             variant="outline"
             className="mt-20 h-16 w-64 border-2 border-[#D048CD] p-4 text-[1.4rem] font-bold text-[#D048CD] transition duration-300 hover:bg-[#D048CD] hover:text-white"
           >
-            {' '}
-            Quero me inscrever!{' '}
+            Quero me inscrever!
           </Button>
         </div>
         <Image
@@ -181,11 +178,11 @@ export default function CursoPage() {
         />
       </div>
 
-      <div className="relative h-screen w-screen bg-[#060606]">
+      <div className="relative h-screen w-screen">
         <div className="relative z-10 w-[50vw] p-4 pl-40 pt-40">
           <h1 className="mb-8 text-[3.5rem] font-bold">
             Torne-se um <span className="text-[#CEE130]">tatuador</span>{' '}
-            completo!{' '}
+            completo!
           </h1>
           <h3 className="text-[1.3rem]">
             Quero que você vá <b>muito além do básico</b>: Irei te ensinar
@@ -202,8 +199,7 @@ export default function CursoPage() {
             variant="outline"
             className="mt-20 h-16 w-60 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
           >
-            {' '}
-            Quero ser tatuador!{' '}
+            Quero ser tatuador!
           </Button>
         </div>
         <Image
