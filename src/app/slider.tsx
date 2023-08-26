@@ -44,7 +44,7 @@ export function Slider() {
     >
       {data.map(({ text, author, rate }) => (
         <SwiperSlide key={author}>
-          <Card className="h-[300px] w-6/12 bg-[#f7f9f6] text-left text-2xl text-background">
+          <Card className="h-[300px] w-6/12 rounded-[2rem] bg-[#f7f9f6] text-left text-2xl text-background">
             <CardContent className="flex h-full flex-col justify-around">
               <p>{text}</p>
               <p className="font-bold">- {author}</p>
