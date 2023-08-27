@@ -69,6 +69,30 @@ export function Slider() {
           height={550}
         />
       </SwiperSlide>
+      <SwiperSlide>
+        <Image
+          src="/aluno-7.png"
+          alt="Resultado de tatuagem feita por aluno da Mandy"
+          width={400}
+          height={550}
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image
+          src="/aluno-8.png"
+          alt="Resultado de tatuagem feita por aluno da Mandy"
+          width={400}
+          height={550}
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image
+          src="/aluno-9.png"
+          alt="Resultado de tatuagem feita por aluno da Mandy"
+          width={400}
+          height={550}
+        />
+      </SwiperSlide>
     </Swiper>
   )
 }

@@ -7,10 +7,10 @@ import Link from 'next/link'
 export default function CursoPage() {
   return (
     <>
-      <div className="relative h-screen w-screen">
+      <div className="relative h-screen w-full">
         <div className="relative z-10 w-[50vw] p-4 pl-40 pt-40">
           <h1 className="mb-8 text-[3.5rem] font-bold">
-            Sua jornada como <span className="text-[#CEE130]">tatuador</span>{' '}
+            Sua jornada como <span className="text-secondary">tatuador</span>{' '}
             começa aqui.{' '}
           </h1>
           <h3 className="text-[1.5rem]">
@@ -24,7 +24,7 @@ export default function CursoPage() {
           <Button
             asChild
             variant="outline"
-            className="mt-20 h-16 w-60 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
+            className="mt-20 h-16 w-60 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white"
           >
             <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
               Quero ser tatuador!
@@ -32,7 +32,7 @@ export default function CursoPage() {
           </Button>
         </div>
         <Image
-          className="relative h-screen w-screen object-cover"
+          className="relative h-screen w-full object-cover"
           src="/mandy-pink-ink-background.png"
           alt="Tatuadora Mandy segurando uma máquina de tatuagem"
           fill
@@ -41,7 +41,7 @@ export default function CursoPage() {
         />
       </div>
 
-      <div className="relative h-screen w-screen">
+      <div className="relative h-screen w-full">
         <div className="flex justify-center space-x-4 px-40">
           <div className="flex h-full flex-col items-center justify-center p-20">
             <Image
@@ -116,7 +116,7 @@ export default function CursoPage() {
           />
           <h2 className="pl-8 text-[2rem] font-bold">
             Bônus <br />
-            <span className="text-[#D048CD]">exclusivo</span>:
+            <span className="text-primary">exclusivo</span>:
           </h2>
           <p className="max-w-sm pl-4">
             Tenha acesso ao meu Whatsapp pessoal para assistência online durante
@@ -128,7 +128,7 @@ export default function CursoPage() {
           <Button
             asChild
             variant="outline"
-            className="mt-20 h-16 w-64 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
+            className="mt-20 h-16 w-64 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white"
           >
             <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
               Quero esse bônus!
@@ -136,7 +136,7 @@ export default function CursoPage() {
           </Button>
         </div>
         <Image
-          className="relative -z-10 h-screen w-screen object-cover"
+          className="relative -z-10 h-screen w-full object-cover"
           src="/pontinhos-bg.png"
           alt="Pontinhos verdes"
           fill
@@ -144,10 +144,10 @@ export default function CursoPage() {
         />
       </div>
 
-      <div className="relative h-screen w-screen">
+      <div className="relative h-screen w-full">
         <div className="relative z-10 w-[50vw] p-4 pl-40 pt-40">
           <h1 className="mb-8 text-[3.5rem] font-bold">
-            Se <span className="text-[#CEE130]">você</span>...
+            Se <span className="text-secondary">você</span>...
           </h1>
           <ul className="list-disc pl-6 text-[1.2rem]">
             <li>Sonha em ser tatuador, mas não sabe como começar</li>
@@ -169,12 +169,12 @@ export default function CursoPage() {
           </ul>
           <p className="mt-6 pt-4 text-[1.5rem]">
             Então este é o curso{' '}
-            <span className="text-[#CEE130]">perfeito para você</span>!
+            <span className="text-secondary">perfeito para você</span>!
           </p>
           <Button
             asChild
             variant="outline"
-            className="mt-20 h-16 w-64 border-2 border-[#D048CD] p-4 text-[1.4rem] font-bold text-[#D048CD] transition duration-300 hover:bg-[#D048CD] hover:text-white"
+            className="mt-20 h-16 w-64 border-2 border-primary p-4 text-[1.4rem] font-bold text-primary transition duration-300 hover:bg-primary hover:text-white"
           >
             <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
               Quero me inscrever!
@@ -182,7 +182,7 @@ export default function CursoPage() {
           </Button>
         </div>
         <Image
-          className="relative h-screen w-screen object-cover"
+          className="relative h-screen w-full object-cover"
           src="/mandy-green-ink-background.png"
           alt="Tatuadora Mandy criando uma arte em seu tablet"
           fill
@@ -192,9 +192,8 @@ export default function CursoPage() {
 
       <div className="flex flex-col items-center justify-center space-y-8 p-8">
         <h1 className="mx-72 px-60 text-center text-[2.5rem] font-bold">
-          Esses são alguns dos{' '}
-          <span className="text-[#D048CD]">resultados</span> dos meus alunos
-          durante nosso curso:
+          Esses são alguns dos <span className="text-primary">resultados</span>{' '}
+          dos meus alunos durante nosso curso:
         </h1>
 
         <Slider />
@@ -208,7 +207,7 @@ export default function CursoPage() {
           <Button
             asChild
             variant="outline"
-            className="mt-10 h-16 w-64 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
+            className="mt-10 h-16 w-64 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white"
           >
             <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
               Quero ser aluno!
@@ -217,11 +216,11 @@ export default function CursoPage() {
         </div>
       </div>
 
-      <div className="flex h-screen w-screen px-52 pt-20">
+      <div className="flex h-screen w-full px-52 pt-20">
         <div className="flex flex-1 flex-col space-y-4 p-8">
           <h1 className="text-[3rem] font-bold">
             Quem é a <br />
-            <span className="text-[#D048CD]">sensei</span> ?
+            <span className="text-primary">sensei</span> ?
           </h1>
           <p className="pb-10 text-justify text-[1.2rem] text-[#E2E1DD]">
             Prazer, <i>Mandy</i>!
@@ -247,7 +246,7 @@ export default function CursoPage() {
 
           <Button
             asChild
-            className=" h-16 w-64 border-2 bg-[#CEE130] p-4 text-[1.4rem] font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white"
+            className=" h-16 w-64 border-2 bg-secondary p-4 text-[1.4rem] font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white"
           >
             <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
               Entrar em contato
@@ -265,7 +264,7 @@ export default function CursoPage() {
         </div>
       </div>
 
-      <div className="flex h-fit w-screen px-52 pt-20">
+      <div className="flex h-fit w-full px-52 pt-20">
         <div className="relative flex-1 pb-60 pt-60">
           <Image
             src="/mandy-pink-bg.png"
@@ -277,16 +276,16 @@ export default function CursoPage() {
 
         <div className="flex flex-1 flex-col space-y-4 p-10">
           <h1 className="text-[3rem] font-bold">
-            Perguntas <span className="text-[#D048CD]">frequentes</span>
+            Perguntas <span className="text-primary">frequentes</span>
           </h1>
           <Faq />
         </div>
       </div>
 
-      <div className="relative h-screen w-screen">
+      <div className="relative h-screen w-full">
         <div className="relative z-10 w-[50vw] p-4 pl-40 pt-40">
           <h1 className="mb-8 text-[3.5rem] font-bold">
-            Torne-se um <span className="text-[#CEE130]">tatuador</span>{' '}
+            Torne-se um <span className="text-secondary">tatuador</span>{' '}
             completo!
           </h1>
           <h3 className="text-[1.3rem]">
@@ -303,7 +302,7 @@ export default function CursoPage() {
           <Button
             asChild
             variant="outline"
-            className="mt-20 h-16 w-60 border-2 border-[#CEE130] p-4 text-[1.4rem] font-bold text-[#CEE130] transition duration-300 hover:bg-[#CEE130] hover:text-white"
+            className="mt-20 h-16 w-60 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white"
           >
             <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
               Quero ser tatuador!
@@ -311,7 +310,7 @@ export default function CursoPage() {
           </Button>
         </div>
         <Image
-          className="relative h-screen w-screen object-cover pr-20"
+          className="relative h-screen w-full object-cover pr-20"
           src="/decalque-goku.png"
           alt="Decalque de tatuagem do goku"
           fill
