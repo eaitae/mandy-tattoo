@@ -3,12 +3,14 @@ import Image from 'next/image'
 import { Slider } from './slider'
 import { Faq } from './faq'
 import Link from 'next/link'
+import { Navbar } from '@/components/navbar'
 
 export default function CursoPage() {
   return (
     <>
       <div className="relative h-screen w-full">
-        <div className="relative z-10 w-[50vw] p-4 pl-40 pt-40">
+        <Navbar />
+        <div className="relative w-[50vw] p-4 pl-40 pt-40">
           <h1 className="mb-8 text-[3.5rem] font-bold">
             Sua jornada como <span className="text-secondary">tatuador</span>{' '}
             começa aqui.{' '}
@@ -32,7 +34,7 @@ export default function CursoPage() {
           </Button>
         </div>
         <Image
-          className="relative h-screen w-full object-cover"
+          className="relative -z-10 h-screen w-full object-cover"
           src="/mandy-pink-ink-background.png"
           alt="Tatuadora Mandy segurando uma máquina de tatuagem"
           fill

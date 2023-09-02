@@ -2,10 +2,12 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Faq } from './faq'
+import { Navbar } from '@/components/navbar'
 
 export default function Mentoria() {
   return (
     <>
+      <Navbar />
       <div className="flex h-fit w-full flex-col pb-10 md:relative md:flex-row md:pr-10">
         <div className="p-8 pt-[6vw] text-center md:z-10 md:w-1/2 md:pl-[10vw] md:text-left">
           <h1 className="mb-8 text-[2rem] font-bold lg:text-[2rem] 2xl:text-[3.5rem]">

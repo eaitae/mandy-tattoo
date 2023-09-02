@@ -252,7 +252,7 @@ function Bio() {
 
 function Budget() {
   return (
-    <section className="flex flex-col gap-4 md:flex-row">
+    <section id="orcamentos" className="flex flex-col gap-4 md:flex-row">
       <div className="flex flex-col items-center justify-around gap-6 text-2xl">
         <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
           Como fazer um <span className="text-primary">orçamento</span>?
