@@ -1,14 +1,33 @@
-import { cn } from '@/lib/utils'
 import { Instagram } from 'lucide-react'
 import Image from 'next/image'
-import { Slider } from './slider'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { Location } from './location'
-import { Faq } from './faq'
-import { Navbar } from '@/components/navbar'
 
-const works = Array.from({ length: 9 }, (_, i) => `/work-${i + 1}.jpg`)
+import { Button } from '@/components/ui/button'
+import { Navbar } from '@/components/navbar'
+import { cn } from '@/lib/utils'
+
+import { Faq } from './faq'
+import { Location } from './location'
+import { Slider } from './slider'
+
+import backgroundImage from '@/assets/home-background.png'
+import divisorImage from '@/assets/divisor.png'
+import logoImage from '@/assets/home-logo.png'
+import botLeftIndicatorImage from '@/assets/bot-left-indicator.png'
+import botRightIndicatorImage from '@/assets/bot-right-indicator.png'
+import totLeftIndicatorImage from '@/assets/top-left-indicator.png'
+import totRightIndicatorImage from '@/assets/top-right-indicator.png'
+import workImage1 from '@/assets/work-1.jpg'
+import workImage2 from '@/assets/work-2.jpg'
+import workImage3 from '@/assets/work-3.jpg'
+import workImage4 from '@/assets/work-4.jpg'
+import workImage5 from '@/assets/work-5.jpg'
+import workImage6 from '@/assets/work-6.jpg'
+import workImage7 from '@/assets/work-7.jpg'
+import workImage8 from '@/assets/work-8.jpg'
+import workImage9 from '@/assets/work-9.jpg'
+import bioImage from '@/assets/mandy-bio-2.png'
+import budgetImage from '@/assets/mandy-orcamento.jpeg'
 
 export default function Home() {
   return (
@@ -45,10 +64,9 @@ export default function Home() {
       </footer>
       <Image
         className="max-h-10 w-full"
-        src="/white-lines-divisor.png"
+        src={divisorImage}
         alt="Divisor de conteúdo"
-        width={4269}
-        height={313}
+        placeholder="blur"
       />
     </div>
   )
@@ -61,10 +79,8 @@ function Header() {
         <Link href="/">
           <Image
             className="w-[50vw] md:w-[25vw]"
-            src="/mandy-logo.png"
+            src={logoImage}
             alt="Mandy Tattoo logo"
-            width={1366}
-            height={768}
             priority
           />
         </Link>
@@ -72,10 +88,9 @@ function Header() {
 
       <Image
         className="relative -z-10 max-h-[50vh] w-full object-cover md:h-screen md:max-h-screen"
-        src="/home-background.png"
+        src={backgroundImage}
         alt="Tatuagem do personagem Luffy do anime One Piece"
         fill
-        sizes="100vw"
         priority
       />
     </header>
@@ -88,8 +103,16 @@ type IndicationProps = {
   text: string
 }
 
+const indicatorMap = {
+  'bot-left': botLeftIndicatorImage,
+  'bot-right': botRightIndicatorImage,
+  'top-left': totLeftIndicatorImage,
+  'top-right': totRightIndicatorImage,
+} as const
+
 function Indication({ posX, posY, text }: IndicationProps) {
   const alignItems = posY === 'bot' ? 'items-end' : 'items-start'
+  const image = indicatorMap[`${posY}-${posX}`]
 
   return (
     <div
@@ -111,10 +134,9 @@ function Indication({ posX, posY, text }: IndicationProps) {
       </p>
       <Image
         className="w-6/12"
-        src={`/${posY}-${posX}-indicator.png`}
+        src={image}
         alt="Indicador textual"
-        width={368.6}
-        height={77.6}
+        placeholder="blur"
       />
     </div>
   )
@@ -147,6 +169,19 @@ function Info() {
   )
 }
 
+// TODO: adjust alts
+const galleryImages = [
+  { image: workImage1, alt: '' },
+  { image: workImage2, alt: '' },
+  { image: workImage3, alt: '' },
+  { image: workImage4, alt: '' },
+  { image: workImage5, alt: '' },
+  { image: workImage6, alt: '' },
+  { image: workImage7, alt: '' },
+  { image: workImage8, alt: '' },
+  { image: workImage9, alt: '' },
+] as const
+
 function Gallery() {
   return (
     <section className="flex flex-col gap-10">
@@ -165,15 +200,13 @@ function Gallery() {
         </Button>
       </header>
       <div className="grid grid-cols-3 grid-rows-3 gap-6">
-        {/* TODO: adjust alts */}
-        {works.map((work) => (
+        {galleryImages.map(({ image, alt }) => (
           <Image
             className="aspect-[9/10] w-full object-cover"
-            key={work}
-            src={work}
-            alt="..."
-            width={2861}
-            height={3603}
+            key={image.src}
+            src={image}
+            alt={alt}
+            placeholder="blur"
           />
         ))}
       </div>
@@ -206,10 +239,9 @@ function Bio() {
       </h2>
       <Image
         className="max-h-screen w-full object-contain md:w-6/12 lg:w-4/12"
-        src="/mandy-bio-2.png"
-        alt="..."
-        width={1504}
-        height={1906}
+        src={bioImage}
+        alt="Tatuadora Mandy"
+        placeholder="blur"
       />
       <div className="flex flex-col items-center justify-around gap-6 text-2xl">
         <h2 className="hidden w-full text-3xl md:block md:text-4xl lg:text-5xl xl:text-6xl">
@@ -287,10 +319,9 @@ function Budget() {
       </div>
       <Image
         className="max-h-screen w-full rounded-[2rem] object-contain md:w-6/12 lg:w-4/12"
-        src="/mandy-orcamento.jpeg"
+        src={budgetImage}
         alt="Mandy realizando tatuagem em um braço"
-        width={750}
-        height={1114}
+        placeholder="blur"
       />
     </section>
   )
