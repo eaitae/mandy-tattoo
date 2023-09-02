@@ -9,7 +9,9 @@ export function Faq() {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
-        <AccordionTrigger>Só tem mentoria online?</AccordionTrigger>
+        <AccordionTrigger className="text-justify">
+          Só tem mentoria online?
+        </AccordionTrigger>
         <AccordionContent>
           Sim, a ideia é realizar uma mentoria descomplicada e que se encaixe na
           vida corrida que levamos hoje em dia, tendo horários flexivéis e
@@ -17,7 +19,7 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           O que eu vou aprender durante a mentoria?
         </AccordionTrigger>
         <AccordionContent>
@@ -29,7 +31,7 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           É preciso ter experência prévia com tatuagem?
         </AccordionTrigger>
         <AccordionContent>
@@ -40,7 +42,9 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
-        <AccordionTrigger>Como funciona a mentoria?</AccordionTrigger>
+        <AccordionTrigger className="text-justify">
+          Como funciona a mentoria?
+        </AccordionTrigger>
         <AccordionContent>
           Toda semana serão passadas atividades para que o aluno apresente no
           prazo de 7 dias. As atividades serão avaliadas e fornecerei feedback.
@@ -51,7 +55,7 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-6">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           Como funciona a assistência online após a mentoria?
         </AccordionTrigger>
         <AccordionContent>
@@ -62,7 +66,9 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-7">
-        <AccordionTrigger>Como funciona a inscrição?</AccordionTrigger>
+        <AccordionTrigger className="text-justify">
+          Como funciona a inscrição?
+        </AccordionTrigger>
         <AccordionContent>
           A inscrição é feita diretamente comigo através do instagram! Ao clicar
           em qualquer um dos botões, você será redirecionado para a minha caixa
@@ -71,7 +77,7 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-8">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           Por que quando clico para me inscrever, sou direcionado a DM do
           instagram?
         </AccordionTrigger>
