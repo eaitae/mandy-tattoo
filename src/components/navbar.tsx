@@ -20,7 +20,6 @@ const routes = [
 export function Navbar({ children }: NavbarProps) {
   const pathname = usePathname()
 
-  console.log('🚀 ~ file: navbar.tsx:21 ~ Navbar ~ pathname:', pathname)
   return (
     <nav className="flex flex-col items-center justify-center gap-4 pt-4 md:flex-row-reverse md:items-start md:justify-around md:px-4 md:pt-16">
       <ul className="flex flex-wrap justify-around uppercase md:justify-end md:gap-1">

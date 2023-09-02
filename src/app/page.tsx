@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import * as Icons from 'lucide-react'
+import { Instagram } from 'lucide-react'
 import Image from 'next/image'
 import { Slider } from './slider'
 import { Button } from '@/components/ui/button'
@@ -157,7 +157,7 @@ function Gallery() {
 
         <Button asChild variant="link">
           <Link href="https://www.instagram.com/mandytattoodf/" target="_blank">
-            <Icons.Instagram className="mr-2 inline" size="2rem" />
+            <Instagram className="mr-2 inline" size="2rem" />
             <span className="text-xl text-foreground md:text-xl lg:text-2xl">
               @mandytattoodf
             </span>

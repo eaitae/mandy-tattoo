@@ -2,8 +2,7 @@
 
 import * as React from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import * as Icons from 'lucide-react'
-const ChevronDown = Icons.ChevronDown
+import { ChevronDown } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 

@@ -2,7 +2,7 @@
 
 import { Navigation, Pagination, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import * as Icons from 'lucide-react'
+import { Star } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 
 import 'swiper/css'
@@ -65,7 +65,7 @@ export function Slider() {
               <p className="font-bold">- {author}</p>
               <div className="flex justify-center">
                 {ratings.map((ratePosition) => (
-                  <Icons.Star
+                  <Star
                     key={author + ratePosition}
                     color="#d048cd"
                     fill={rate >= ratePosition ? '#d048cd' : '#f7f9f6'}
