@@ -8,12 +8,12 @@ type NavbarProps = {
 
 export function Navbar({ children }: NavbarProps) {
   return (
-    <nav className="flex flex-col items-center justify-center gap-4 pt-4 md:flex-row md:pt-16">
-      <ul className="flex flex-wrap justify-around align-middle uppercase md:justify-end md:gap-8 md:px-16">
+    <nav className="flex flex-col items-center justify-center gap-4 pt-4 md:flex-row-reverse md:items-start md:justify-around md:px-4 md:pt-16">
+      <ul className="flex flex-wrap justify-around uppercase md:justify-end md:gap-1">
         <li>
           <Button
             asChild
-            className="hover:bg-primary md:text-2xl"
+            className="hover:bg-primary lg:text-2xl"
             variant="ghost"
           >
             <Link href="/">Home</Link>
@@ -22,7 +22,7 @@ export function Navbar({ children }: NavbarProps) {
         <li>
           <Button
             asChild
-            className="hover:bg-primary md:text-2xl"
+            className="hover:bg-primary lg:text-2xl"
             variant="ghost"
           >
             <Link href="/orcamentos">Orçamentos</Link>
@@ -31,7 +31,7 @@ export function Navbar({ children }: NavbarProps) {
         <li>
           <Button
             asChild
-            className="hover:bg-primary md:text-2xl"
+            className="hover:bg-primary lg:text-2xl"
             variant="ghost"
           >
             <Link href="/mentoria">Mentoria</Link>
@@ -40,7 +40,7 @@ export function Navbar({ children }: NavbarProps) {
         <li>
           <Button
             asChild
-            className="hover:bg-primary md:text-2xl"
+            className="hover:bg-primary lg:text-2xl"
             variant="ghost"
           >
             <Link href="/curso">Curso</Link>
