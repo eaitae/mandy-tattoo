@@ -9,7 +9,9 @@ export function Faq() {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
-        <AccordionTrigger>O curso é presencial?</AccordionTrigger>
+        <AccordionTrigger className="text-justify">
+          O curso é presencial?
+        </AccordionTrigger>
         <AccordionContent>
           Sim, realizamos o curso no meu estúdio em Águas Claras - Brasília, DF.
           Estamos localizados ao lado da estação de metrô Águas Claras e
@@ -19,7 +21,9 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>São quantos dias de curso?</AccordionTrigger>
+        <AccordionTrigger className="text-justify">
+          São quantos dias de curso?
+        </AccordionTrigger>
         <AccordionContent>
           São 2 dias consecutivos a escolha do aluno! Começamos as 9 horas e
           finalizamos por volta das 20 horas. Lembrando que o curso é intensivo
@@ -30,7 +34,7 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           É preciso ter experência prévia com tatuagem?
         </AccordionTrigger>
         <AccordionContent>
@@ -39,7 +43,7 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           Os materiais são fornecidos ou preciso comprar?
         </AccordionTrigger>
         <AccordionContent>
@@ -50,18 +54,19 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-5">
-        <AccordionTrigger>Em quem vou tatuar?</AccordionTrigger>
+        <AccordionTrigger className="text-justify">
+          Em quem vou tatuar?
+        </AccordionTrigger>
         <AccordionContent>
           Cada aluno deve trazer uma pessoa voluntária no segundo dia de curso
           para que possamos realizar 3 tatuagens em pele humana. Recomendo que
-          chame alguém de confiança e que te apoie nessa jornada! Se não
-          conseguir encontrar um voluntário disposto a realizar 3 tatuagens,
-          você pode trazer mais de 1 ou tatuar em si mesmo. Caso tenha
-          dificuldade nessa parte, pode me chamar que irei te ajudar!
+          chame alguém de confiança e que te apoie nessa jornada! Caso tenha
+          dificuldade em encontrar um voluntário, pode falar comigo que irei te
+          ajudar!
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-6">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           Como funciona a assistência online após o curso?
         </AccordionTrigger>
         <AccordionContent>
@@ -72,7 +77,9 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-7">
-        <AccordionTrigger>Como funciona a inscrição?</AccordionTrigger>
+        <AccordionTrigger className="text-justify">
+          Como funciona a inscrição?
+        </AccordionTrigger>
         <AccordionContent>
           A inscrição é feita diretamente comigo através do instagram! Ao clicar
           em qualquer um dos botões, você será redirecionado para a minha caixa
@@ -81,7 +88,7 @@ export function Faq() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-8">
-        <AccordionTrigger>
+        <AccordionTrigger className="text-justify">
           Por que quando clico para me inscrever, sou direcionado a DM do
           instagram?
         </AccordionTrigger>
