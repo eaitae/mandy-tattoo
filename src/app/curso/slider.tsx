@@ -2,7 +2,9 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, A11y } from 'swiper/modules'
-import Image from 'next/image'
+
+import { ImageSpotlight } from '@/components/image-spotlight'
+
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -43,7 +45,7 @@ export function Slider() {
     >
       {images.map((image) => (
         <SwiperSlide key={image.src}>
-          <Image
+          <ImageSpotlight
             src={image}
             alt="Resultado de tatuagem feita por aluno da Mandy"
             width={400}

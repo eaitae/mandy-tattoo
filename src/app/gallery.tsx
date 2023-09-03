@@ -1,17 +1,11 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import { Button } from '@/components/ui/button'
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-  DialogClose,
-} from '@/components/ui/dialog'
+import { ImageSpotlight } from '@/components/image-spotlight'
 
 import workImage1 from '@/assets/work-1.jpg'
 import workImage2 from '@/assets/work-2.jpg'
@@ -69,7 +63,7 @@ export function Gallery() {
 
         <Button asChild variant="link">
           <Link href="https://www.instagram.com/mandytattoodf/" target="_blank">
-          <FontAwesomeIcon icon={faInstagram} className='h-[1.8rem] pr-2'/>
+            <FontAwesomeIcon icon={faInstagram} className="h-[1.8rem] pr-2" />
             <span className="text-xl text-foreground md:text-xl lg:text-2xl">
               @mandytattoodf
             </span>
@@ -78,27 +72,12 @@ export function Gallery() {
       </header>
       <div className="grid grid-cols-3 grid-rows-3 gap-2 md:gap-6">
         {images.map(({ image, alt }) => (
-          <Dialog key={image.src}>
-            <DialogTrigger>
-              <Image
-                className="aspect-[9/10] w-full object-cover"
-                src={image}
-                alt={alt}
-                sizes="30vw"
-                placeholder="blur"
-              />
-            </DialogTrigger>
-            <DialogContent className="h-full w-screen max-w-[100vw]">
-              <DialogClose className="relative overflow-hidden">
-                <Image
-                  className="relative h-full w-full object-contain"
-                  src={image}
-                  alt={alt}
-                  sizes="(orientation: landscape) 100vh, 100vw"
-                />
-              </DialogClose>
-            </DialogContent>
-          </Dialog>
+          <ImageSpotlight
+            className="aspect-[9/10] w-full object-cover"
+            key={image.src}
+            src={image}
+            alt={alt}
+          />
         ))}
       </div>
     </section>
