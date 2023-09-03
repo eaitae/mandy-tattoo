@@ -67,6 +67,7 @@ export default function Home() {
         src={divisorImage}
         alt="Divisor de conteúdo"
         placeholder="blur"
+        sizes="100vw"
       />
     </div>
   )
@@ -81,6 +82,7 @@ function Header() {
             className="w-[50vw] md:w-[25vw]"
             src={logoImage}
             alt="Mandy Tattoo logo"
+            sizes="(min-width: 768px) 25vw, 50vw"
             priority
           />
         </Link>
@@ -90,6 +92,7 @@ function Header() {
         className="relative -z-10 max-h-[50vh] w-full object-cover md:h-screen md:max-h-screen"
         src={backgroundImage}
         alt="Tatuagem do personagem Luffy do anime One Piece"
+        sizes="100vw"
         fill
         priority
       />
@@ -136,7 +139,7 @@ function Indication({ posX, posY, text }: IndicationProps) {
         className="w-6/12"
         src={image}
         alt="Indicador textual"
-        placeholder="blur"
+        sizes="(min-width: 768px) 25vw, 35vw"
       />
     </div>
   )
@@ -169,17 +172,40 @@ function Info() {
   )
 }
 
-// TODO: adjust alts
 const galleryImages = [
-  { image: workImage1, alt: '' },
-  { image: workImage2, alt: '' },
-  { image: workImage3, alt: '' },
-  { image: workImage4, alt: '' },
-  { image: workImage5, alt: '' },
-  { image: workImage6, alt: '' },
-  { image: workImage7, alt: '' },
-  { image: workImage8, alt: '' },
-  { image: workImage9, alt: '' },
+  { image: workImage1, alt: 'Tatugem do personagem Tengen Uzui em um braço' },
+  {
+    image: workImage2,
+    alt: 'Tatugem do personagem Monkey D. Luffy em um braço',
+  },
+  {
+    image: workImage3,
+    alt: 'Tatugem do personagem Edward Elric em um braço',
+  },
+  {
+    image: workImage4,
+    alt: 'Tatugem do personagem Shoyo Hinata em um braço',
+  },
+  {
+    image: workImage5,
+    alt: 'Tatugem do personagem Sailor Mars em um braço',
+  },
+  {
+    image: workImage6,
+    alt: 'Tatugem dos personagens Monkey D. Luffy e Trafalgar D. Water Law em um braço',
+  },
+  {
+    image: workImage7,
+    alt: 'Tatugem do personagem Naruto Uzumaki em um braço',
+  },
+  {
+    image: workImage8,
+    alt: 'Tatugem do personagem Haku em um braço',
+  },
+  {
+    image: workImage9,
+    alt: 'Tatugem do personagem Tobirama Senju em um braço',
+  },
 ] as const
 
 function Gallery() {
@@ -199,13 +225,14 @@ function Gallery() {
           </Link>
         </Button>
       </header>
-      <div className="grid grid-cols-3 grid-rows-3 gap-6">
+      <div className="grid grid-cols-3 grid-rows-3 gap-2 md:gap-6">
         {galleryImages.map(({ image, alt }) => (
           <Image
             className="aspect-[9/10] w-full object-cover"
             key={image.src}
             src={image}
             alt={alt}
+            sizes="30vw"
             placeholder="blur"
           />
         ))}
@@ -241,9 +268,10 @@ function Bio() {
         className="max-h-screen w-full object-contain md:w-6/12 lg:w-4/12"
         src={bioImage}
         alt="Tatuadora Mandy"
+        sizes="(min-width: 768px) 35vw (min-width: 768px) 50vw, 100vw"
         placeholder="blur"
       />
-      <div className="flex flex-col items-center justify-around gap-6 text-2xl">
+      <div className="flex flex-col items-center justify-around gap-6 text-2xl md:w-6/12 lg:w-8/12">
         <h2 className="hidden w-full text-3xl md:block md:text-4xl lg:text-5xl xl:text-6xl">
           Quem é a <span className="text-secondary">artista</span>?
         </h2>
@@ -285,7 +313,7 @@ function Bio() {
 function Budget() {
   return (
     <section id="orcamentos" className="flex flex-col gap-4 md:flex-row">
-      <div className="flex flex-col items-center justify-around gap-6 text-2xl">
+      <div className="flex flex-col items-center justify-around gap-6 text-2xl md:w-6/12 lg:w-8/12">
         <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
           Como fazer um <span className="text-primary">orçamento</span>?
         </h2>
@@ -321,6 +349,7 @@ function Budget() {
         className="max-h-screen w-full rounded-[2rem] object-contain md:w-6/12 lg:w-4/12"
         src={budgetImage}
         alt="Mandy realizando tatuagem em um braço"
+        sizes="(min-width: 768px) 35vw (min-width: 768px) 50vw, 100vw"
         placeholder="blur"
       />
     </section>

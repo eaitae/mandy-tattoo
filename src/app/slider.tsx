@@ -1,8 +1,9 @@
 'use client'
 
+import { Star } from 'lucide-react'
 import { Navigation, Pagination, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Star } from 'lucide-react'
+
 import { Card, CardContent } from '@/components/ui/card'
 
 import 'swiper/css'
