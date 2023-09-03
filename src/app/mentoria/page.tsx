@@ -1,8 +1,45 @@
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
 import Image from 'next/image'
-import { Faq } from './faq'
+import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 import { Navbar } from '@/components/navbar'
+
+import { Faq } from './faq'
+
+import mandyMentoriaImage from '@/assets/mandy-mentoria.png'
+import iconImage1 from '@/assets/icone-mentoria-1.png'
+import iconImage2 from '@/assets/icone-mentoria-2.png'
+import iconImage3 from '@/assets/icone-mentoria-3.png'
+import iconImage4 from '@/assets/icone-mentoria-4.png'
+import iconImage5 from '@/assets/icone-mentoria-5.png'
+import bioImage2 from '@/assets/mandy-bio-2.png'
+import budgetImage from '@/assets/mandy-orcamento.jpeg'
+
+const topIcons = [
+  {
+    icon: iconImage1,
+    text: 'Já atua como tatuador, mas quer melhorar suas técnicas e estar atualizado com o mercado atual.',
+  },
+  {
+    icon: iconImage2,
+    text: 'Quer ganhar confiança para atender seus clientes e manter sua agenda sempre lotada.',
+  },
+  {
+    icon: iconImage3,
+    text: 'Sente que ainda tem muito potencial inexplorado e sonha em se tornar referência em tatuagens geeks.',
+  },
+] as const
+
+const bottomIcons = [
+  {
+    icon: iconImage4,
+    text: 'Sabe da importância de ter um portfólio bem construído e uma presença digital forte.',
+  },
+  {
+    icon: iconImage5,
+    text: 'Busca uma mentoria personalizada que te leve além do básico e te ajude a se destacar no mercado.',
+  },
+] as const
 
 export default function Mentoria() {
   return (
@@ -17,10 +54,10 @@ export default function Mentoria() {
           <div className="relative md:hidden">
             <Image
               className="object-contain"
-              src="/mandy-mentoria.png"
+              src={mandyMentoriaImage}
               alt="Banner redondo com foto da tatuadora Mandy e dois informativos: curso com 6 meses de assistência e com certificado digital"
-              height={400}
-              width={400}
+              sizes="(min-width: 768px) 0vw, 100vw"
+              priority
             />
           </div>
           <h3 className="md:text-justify lg:text-[1.2rem] 2xl:text-[1.5rem]">
@@ -43,11 +80,10 @@ export default function Mentoria() {
         <div className="relative hidden md:block md:w-1/2 md:pr-60">
           <Image
             className="h-screen object-contain"
-            src="/mandy-mentoria.png"
+            src={mandyMentoriaImage}
             alt="Banner redondo com foto da tatuadora Mandy e dois informativos: curso com 6 meses de assistência e com certificado digital"
-            sizes="50vw"
+            sizes="(min-width: 768px) 50vw, 0vw"
             fill
-            priority
           />
         </div>
       </div>
@@ -86,68 +122,43 @@ export default function Mentoria() {
 
       <div className="flex h-fit w-full flex-col items-center bg-[#E2E1DD] pb-10">
         <div className="w-fit sm:flex sm:flex-col md:grid md:grid-cols-3 md:gap-x-4 md:gap-y-20">
-          {[
-            {
-              icone: 'icone-mentoria-1.png',
-              texto:
-                'Já atua como tatuador, mas quer melhorar suas técnicas e estar atualizado com o mercado atual.',
-            },
-            {
-              icone: 'icone-mentoria-2.png',
-              texto:
-                'Quer ganhar confiança para atender seus clientes e manter sua agenda sempre lotada.',
-            },
-            {
-              icone: 'icone-mentoria-3.png',
-              texto:
-                'Sente que ainda tem muito potencial inexplorado e sonha em se tornar referência em tatuagens geeks.',
-            },
-          ].map((card, index) => (
+          {topIcons.map(({ icon, text }) => (
             <div
-              key={index}
-              className={`relative mb-8 h-60 w-72 rounded-lg bg-[#060606] md:h-44 md:w-48 lg:h-60 lg:w-72`}
+              key={icon.src}
+              className="relative mb-8 h-60 w-72 rounded-lg bg-[#060606] md:h-44 md:w-48 lg:h-60 lg:w-72"
             >
               <div className="absolute left-1/2 top-[-45px] -translate-x-1/2 transform">
                 <Image
-                  src={`/${card.icone}`}
+                  src={icon}
                   width={90}
                   height={90}
-                  alt={`Ícone de Mentoria ${index + 1}`}
+                  sizes="90px"
+                  alt="Ícone de Mentoria"
                 />
               </div>
               <p className="px-8 pt-20 text-justify text-[1rem] md:px-4 md:pt-14 md:text-[0.8rem] lg:px-8 lg:pt-20 lg:text-[1rem]">
-                {card.texto}
+                {text}
               </p>
             </div>
           ))}
         </div>
         <div className="w-fit gap-x-4 gap-y-20 sm:flex sm:flex-col md:grid md:grid-cols-2 md:pt-20">
-          {[
-            {
-              icone: 'icone-mentoria-4.png',
-              texto:
-                'Sabe da importância de ter um portfólio bem construído e uma presença digital forte.',
-            },
-            {
-              icone: 'icone-mentoria-5.png',
-              texto:
-                'Busca uma mentoria personalizada que te leve além do básico e te ajude a se destacar no mercado.',
-            },
-          ].map((card, index) => (
+          {bottomIcons.map(({ icon, text }) => (
             <div
-              key={index}
+              key={icon.src}
               className={`relative mb-8 h-60 w-72 rounded-lg bg-[#060606] md:h-44 md:w-48 lg:h-60 lg:w-72`}
             >
               <div className="absolute left-1/2 top-[-45px] -translate-x-1/2 transform">
                 <Image
-                  src={`/${card.icone}`}
+                  src={icon}
                   width={90}
                   height={90}
-                  alt={`Ícone de Mentoria ${index + 1}`}
+                  sizes="90px"
+                  alt="Ícone de Mentoria"
                 />
               </div>
               <p className="px-8 pt-20 text-justify text-[1rem] md:px-4 md:pt-14 md:text-[0.8rem] lg:px-8 lg:pt-20 lg:text-[1rem]">
-                {card.texto}
+                {text}
               </p>
             </div>
           ))}
@@ -173,10 +184,10 @@ export default function Mentoria() {
           </h1>
           <div className="block md:hidden">
             <Image
-              src="/mandy-bio-2.png"
+              src={bioImage2}
               alt="Tatuadora Mandy com fundo rosa e seu nome escrito: Amanda Assunção"
-              height={470}
-              width={400}
+              placeholder="blur"
+              sizes="(min-width: 768px) 0, 100vw"
             />
           </div>
           <p>
@@ -224,10 +235,10 @@ export default function Mentoria() {
         <div className="hidden md:relative md:block md:flex-1">
           <Image
             className="h-screen object-contain"
-            src="/mandy-bio-2.png"
+            src={bioImage2}
             alt="Tatuadora Mandy com fundo rosa e seu nome escrito: Amanda Assunção"
-            sizes="50vw"
-            fill
+            placeholder="blur"
+            sizes="(min-width: 768px) 50vw, 0vw"
           />
         </div>
       </div>
@@ -242,13 +253,13 @@ export default function Mentoria() {
       </div>
 
       <div className="flex h-fit w-full flex-col bg-[#E2E1DD] pb-20 md:flex-row lg:px-28 lg:pt-10 2xl:px-52 2xl:pt-20">
-        <div className="relative hidden pb-60 pt-60 md:block md:flex-1">
+        <div className="hidden md:block md:flex-1">
           <Image
-            className="h-screen object-contain"
-            src="/mandy-retrato-mentoria.jpeg"
+            className="max-h-screen object-contain"
+            src={budgetImage}
             alt="Mandy tatuando"
-            layout="fill"
-            sizes="50vw"
+            sizes="(min-width: 768px) 50vw, 0vw"
+            placeholder="blur"
           />
         </div>
 
@@ -259,10 +270,10 @@ export default function Mentoria() {
           </h1>
           <div className="relative block pt-8 md:hidden">
             <Image
-              src="/mandy-retrato-mentoria.jpeg"
+              src={budgetImage}
               alt="Mandy tatuando"
-              height={470}
-              width={400}
+              sizes="(min-width: 768px) 0, 100vw"
+              placeholder="blur"
             />
           </div>
           <div className="mt-6 flex flex-col gap-4 pb-8 text-justify md:gap-8 md:pb-10 md:text-[1rem] lg:text-[1.5rem]">
