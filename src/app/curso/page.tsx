@@ -8,47 +8,51 @@ import { Navbar } from '@/components/navbar'
 export default function CursoPage() {
   return (
     <>
-      <div className="flex h-fit w-full flex-col md:flex-row md:pl-4 2xl:pb-64">
-        <Navbar />
-        <div className="p-8 text-center md:relative md:z-10 md:w-[50vw] md:pt-20 md:text-left lg:pl-20 xl:pl-40 2xl:pt-40">
-          <h1 className="mb-8 text-[2rem] font-bold md:mb-2 md:text-[2.6rem] xl:mb-8 xl:text-[2.8rem] 2xl:text-[3.5rem]">
-            Sua jornada como <span className="text-secondary">tatuador</span>{' '}
-            começa aqui.{' '}
-          </h1>
-          <div className="flex md:hidden">
-            <Image
-              src="/mandy-bg-mobile.png"
-              alt="Tatuadora Mandy segurando uma máquina de tatuagem"
-              height={470}
-              width={440}
-            />
-          </div>
-          <h3 className="pt-4 text-[1rem] md:text-[1.2rem] xl:text-[1.5rem]">
-            Aprenda tudo o que você precisa para iniciar no mercado da tatuagem
-            e se tornar um profissional requisitado e de alto nível.
-          </h3>
-          <p className="mt-6 text-[0.9rem] italic md:text-[1rem] xl:text-[1.2rem]">
-            Com o meu curso intensivo e atualizado, você se tornará o tatuador
-            que sempre sonhou!
-          </p>
-          <Button
-            asChild
-            variant="outline"
-            className="mt-8 h-16 w-60 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white md:mt-20"
-          >
-            <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
-              Quero ser tatuador!
-            </Link>
-          </Button>
+      <div>
+        <div className="relative z-50">
+          <Navbar />
         </div>
-        <Image
-          className="relative hidden h-screen w-full object-cover md:block"
-          src="/mandy-pink-ink-background.png"
-          alt="Tatuadora Mandy segurando uma máquina de tatuagem"
-          fill
-          sizes="100vw"
-          priority
-        />
+        <div className="flex h-fit w-full flex-col md:flex-row md:pl-4 2xl:pb-64">
+          <div className="p-8 text-center md:relative md:z-10 md:w-[50vw] md:pt-20 md:text-left lg:pl-20 xl:pl-40 2xl:pt-40">
+            <h1 className="mb-8 text-[2rem] font-bold md:mb-2 md:text-[2.6rem] xl:mb-8 xl:text-[2.8rem] 2xl:text-[3.5rem]">
+              Sua jornada como <span className="text-secondary">tatuador</span>{' '}
+              começa aqui.{' '}
+            </h1>
+            <div className="flex md:hidden">
+              <Image
+                src="/mandy-bg-mobile.png"
+                alt="Tatuadora Mandy segurando uma máquina de tatuagem"
+                height={470}
+                width={440}
+              />
+            </div>
+            <h3 className="pt-4 text-[1rem] md:text-[1.2rem] xl:text-[1.5rem]">
+              Aprenda tudo o que você precisa para iniciar no mercado da
+              tatuagem e se tornar um profissional requisitado e de alto nível.
+            </h3>
+            <p className="mt-6 text-[0.9rem] italic md:text-[1rem] xl:text-[1.2rem]">
+              Com o meu curso intensivo e atualizado, você se tornará o tatuador
+              que sempre sonhou!
+            </p>
+            <Button
+              asChild
+              variant="outline"
+              className="mt-8 h-16 w-60 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white md:mt-20"
+            >
+              <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
+                Quero ser tatuador!
+              </Link>
+            </Button>
+          </div>
+          <Image
+            className="relative hidden h-screen w-full object-cover md:block"
+            src="/mandy-pink-ink-background.png"
+            alt="Tatuadora Mandy segurando uma máquina de tatuagem"
+            fill
+            sizes="100vw"
+            priority
+          />
+        </div>
       </div>
 
       <div className="relative flex h-fit w-full flex-col">

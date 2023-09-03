@@ -44,7 +44,7 @@ export default function Home() {
         <FAQ />
       </main>
 
-      <footer className="flex flex-col gap-10 px-4 pb-10 md:gap-16 lg:gap-20">
+      <footer className="flex flex-col gap-10 pb-10 md:gap-16 md:px-16 lg:gap-20">
         <div className="flex flex-col gap-6">
           <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
             Nossa <span className="text-secondary">localização</span>
@@ -69,6 +69,18 @@ export default function Home() {
         placeholder="blur"
         sizes="100vw"
       />
+      <Button
+        asChild
+        className="fixed bottom-4 right-4 rounded-md bg-secondary p-2 text-[#060606] hover:bg-primary focus:outline-none focus:ring focus:ring-blue-200"
+      >
+        <Link
+          href="https://api.whatsapp.com/send?phone=556182525342&text=Oi!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+          target="_blank"
+          className="text- text-[#060606] hover:text-white"
+        >
+          Entrar em contato
+        </Link>
+      </Button>
     </div>
   )
 }
@@ -210,7 +222,7 @@ const galleryImages = [
 
 function Gallery() {
   return (
-    <section className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10 md:px-12">
       <header className="flex flex-col items-center gap-2 md:flex-row md:items-end">
         <h2 className="grow text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
           Conheça o meu <span className="text-primary">trabalho</span>...
@@ -243,16 +255,22 @@ function Gallery() {
 
 function Testimonial() {
   return (
-    <section className="flex flex-col items-center gap-10">
+    <section className="flex flex-col items-center gap-10 md:px-12">
       <h2 className="w-full text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         O que estão <span className="text-primary">falando</span> sobre mim...
       </h2>
       <Slider />
       <Button
+        asChild
         variant="outline"
         className="h-16 w-64 border-2 border-secondary p-4 text-2xl font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white"
       >
-        Quero agendar!
+        <Link
+          href="https://api.whatsapp.com/send?phone=556182525342&text=Oi!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+          target="_blank"
+        >
+          Quero agendar!
+        </Link>
       </Button>
     </section>
   )
@@ -260,7 +278,7 @@ function Testimonial() {
 
 function Bio() {
   return (
-    <section className="flex flex-col gap-4 md:flex-row ">
+    <section className="flex flex-col gap-4 md:flex-row md:px-12">
       <h2 className="text-center text-3xl md:hidden">
         Quem é a <span className="text-secondary">artista</span>?
       </h2>
@@ -271,7 +289,7 @@ function Bio() {
         sizes="(min-width: 768px) 35vw (min-width: 768px) 50vw, 100vw"
         placeholder="blur"
       />
-      <div className="flex flex-col items-center justify-around gap-6 text-2xl md:w-6/12 lg:w-8/12">
+      <div className="flex flex-col items-center justify-around gap-6 text-2xl md:w-6/12 md:pr-8 lg:w-8/12">
         <h2 className="hidden w-full text-3xl md:block md:text-4xl lg:text-5xl xl:text-6xl">
           Quem é a <span className="text-secondary">artista</span>?
         </h2>
@@ -302,8 +320,16 @@ function Bio() {
             profissão esteja em boas mãos.
           </p>
         </div>
-        <Button className="h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white xl:text-xl 2xl:text-2xl">
-          Entrar em contato
+        <Button
+          asChild
+          className="h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white xl:text-xl 2xl:text-2xl"
+        >
+          <Link
+            href="https://api.whatsapp.com/send?phone=556182525342&text=Oi!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+            target="_blank"
+          >
+            Entrar em contato
+          </Link>
         </Button>
       </div>
     </section>
@@ -312,12 +338,15 @@ function Bio() {
 
 function Budget() {
   return (
-    <section id="orcamentos" className="flex flex-col gap-4 md:flex-row">
+    <section
+      id="orcamentos"
+      className="flex flex-col gap-4 md:flex-row md:px-12"
+    >
       <div className="flex flex-col items-center justify-around gap-6 text-2xl md:w-6/12 lg:w-8/12">
         <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
           Como fazer um <span className="text-primary">orçamento</span>?
         </h2>
-        <div className="flex flex-col gap-8 text-justify text-lg text-[#E2E1DD] xl:text-xl 2xl:text-2xl">
+        <div className="flex flex-col gap-8 text-justify text-lg text-[#E2E1DD] md:px-12 xl:text-xl 2xl:text-2xl">
           <p>
             {/* TODO: add link */}O orçamento é realizado via Whatsapp, com a
             nossa querida Jess. Ela possui todo o conhecimento necessário para
@@ -341,8 +370,16 @@ function Budget() {
           </p>
         </div>
 
-        <Button className=" h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white xl:text-xl 2xl:text-2xl">
-          Fazer orçamento
+        <Button
+          asChild
+          className=" h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white xl:text-xl 2xl:text-2xl"
+        >
+          <Link
+            href="https://api.whatsapp.com/send?phone=556182525342&text=Oi!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+            target="_blank"
+          >
+            Fazer orçamento
+          </Link>
         </Button>
       </div>
       <Image
@@ -358,7 +395,7 @@ function Budget() {
 
 function FAQ() {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4 md:px-12">
       <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
         Perguntas
         <span className="text-primary"> frequentes</span>
