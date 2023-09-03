@@ -1,23 +1,42 @@
-import { cn } from '@/lib/utils'
-import * as Icons from 'lucide-react'
+import { Instagram } from 'lucide-react'
 import Image from 'next/image'
-import { Slider } from './slider'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { Location } from './location'
-import { Faq } from './faq'
-import { Navbar } from '@/components/navbar'
 
-const works = Array.from({ length: 9 }, (_, i) => `/work-${i + 1}.jpg`)
+import { Button } from '@/components/ui/button'
+import { Navbar } from '@/components/navbar'
+import { cn } from '@/lib/utils'
+
+import { Faq } from './faq'
+import { Location } from './location'
+import { Slider } from './slider'
+
+import backgroundImage from '@/assets/home-background.png'
+import divisorImage from '@/assets/divisor.png'
+import logoImage from '@/assets/home-logo.png'
+import botLeftIndicatorImage from '@/assets/bot-left-indicator.png'
+import botRightIndicatorImage from '@/assets/bot-right-indicator.png'
+import totLeftIndicatorImage from '@/assets/top-left-indicator.png'
+import totRightIndicatorImage from '@/assets/top-right-indicator.png'
+import workImage1 from '@/assets/work-1.jpg'
+import workImage2 from '@/assets/work-2.jpg'
+import workImage3 from '@/assets/work-3.jpg'
+import workImage4 from '@/assets/work-4.jpg'
+import workImage5 from '@/assets/work-5.jpg'
+import workImage6 from '@/assets/work-6.jpg'
+import workImage7 from '@/assets/work-7.jpg'
+import workImage8 from '@/assets/work-8.jpg'
+import workImage9 from '@/assets/work-9.jpg'
+import bioImage from '@/assets/mandy-bio-2.png'
+import budgetImage from '@/assets/mandy-orcamento.jpeg'
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col gap-10 md:gap-20">
+    <div className="flex w-full flex-col gap-10 md:gap-16 lg:gap-20">
       <Header />
 
       <Info />
 
-      <main className="flex flex-col gap-10 px-4 md:gap-20 md:px-40">
+      <main className="flex flex-col gap-10 px-4 md:gap-16 lg:gap-20 lg:px-10">
         <Gallery />
         <Testimonial />
         <Bio />
@@ -25,17 +44,17 @@ export default function Home() {
         <FAQ />
       </main>
 
-      <footer className="flex flex-col gap-10 px-4 pb-10 md:gap-20">
+      <footer className="flex flex-col gap-10 px-4 pb-10 md:gap-16 lg:gap-20">
         <div className="flex flex-col gap-6">
-          <h2 className="text-center text-3xl md:text-6xl">
+          <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
             Nossa <span className="text-secondary">localização</span>
           </h2>
-          <p className="text-lg">
+          <p className="text-lg xl:text-xl 2xl:text-2xl">
             O estúdio Mandy Tattoo é privativo, com atendimento somente com hora
             marcada. Conta com um espaço aconchegante, organizado e limpo,
             prezando sempre pelo seu conforto.
           </p>
-          <p className="text-lg">
+          <p className="text-lg xl:text-xl 2xl:text-2xl">
             É de fácil acesso via transporte público, ficando ao lado da estação
             de metrô Águas Claras e próximo ao ponto de ônibus. Caso deseje vir
             de carro, há a opção de estacionamento privado.
@@ -45,10 +64,10 @@ export default function Home() {
       </footer>
       <Image
         className="max-h-10 w-full"
-        src="/white-lines-divisor.png"
+        src={divisorImage}
         alt="Divisor de conteúdo"
-        width={4269}
-        height={313}
+        placeholder="blur"
+        sizes="100vw"
       />
     </div>
   )
@@ -61,21 +80,20 @@ function Header() {
         <Link href="/">
           <Image
             className="w-[50vw] md:w-[25vw]"
-            src="/mandy-logo.png"
+            src={logoImage}
             alt="Mandy Tattoo logo"
-            width={1366}
-            height={768}
+            sizes="(min-width: 768px) 25vw, 50vw"
             priority
           />
         </Link>
       </Navbar>
 
       <Image
-        className="relative -z-10 max-h-[50vh] w-full object-cover md:h-screen"
-        src="/home-background.png"
+        className="relative -z-10 max-h-[50vh] w-full object-cover md:h-screen md:max-h-screen"
+        src={backgroundImage}
         alt="Tatuagem do personagem Luffy do anime One Piece"
-        fill
         sizes="100vw"
+        fill
         priority
       />
     </header>
@@ -88,13 +106,21 @@ type IndicationProps = {
   text: string
 }
 
+const indicatorMap = {
+  'bot-left': botLeftIndicatorImage,
+  'bot-right': botRightIndicatorImage,
+  'top-left': totLeftIndicatorImage,
+  'top-right': totRightIndicatorImage,
+} as const
+
 function Indication({ posX, posY, text }: IndicationProps) {
   const alignItems = posY === 'bot' ? 'items-end' : 'items-start'
+  const image = indicatorMap[`${posY}-${posX}`]
 
   return (
     <div
       className={cn(
-        `flex w-full ${alignItems} w-10/12 justify-end gap-4 md:w-6/12`,
+        `flex w-full ${alignItems} w-10/12 justify-end gap-4 md:w-9/12 lg:w-8/12 xl:w-6/12`,
         {
           'flex-row-reverse': posX === 'left',
           'self-end': posX === 'right',
@@ -102,7 +128,7 @@ function Indication({ posX, posY, text }: IndicationProps) {
       )}
     >
       <p
-        className={cn('md:text-2xl', {
+        className={cn('lg:text-xl xl:text-2xl', {
           'mt-3': posY === 'top',
           'mb-3': posY === 'bot',
         })}
@@ -111,10 +137,9 @@ function Indication({ posX, posY, text }: IndicationProps) {
       </p>
       <Image
         className="w-6/12"
-        src={`/${posY}-${posX}-indicator.png`}
+        src={image}
         alt="Indicador textual"
-        width={368.6}
-        height={77.6}
+        sizes="(min-width: 768px) 25vw, 35vw"
       />
     </div>
   )
@@ -122,7 +147,7 @@ function Indication({ posX, posY, text }: IndicationProps) {
 
 function Info() {
   return (
-    <section className="-mt-[10rem] flex flex-col gap-16 md:-mt-[28rem]">
+    <section className="-mt-[10rem] flex flex-col gap-16 md:-mt-[14rem] lg:-mt-[28rem]">
       <Indication
         posX="right"
         posY="bot"
@@ -147,33 +172,68 @@ function Info() {
   )
 }
 
+const galleryImages = [
+  { image: workImage1, alt: 'Tatugem do personagem Tengen Uzui em um braço' },
+  {
+    image: workImage2,
+    alt: 'Tatugem do personagem Monkey D. Luffy em um braço',
+  },
+  {
+    image: workImage3,
+    alt: 'Tatugem do personagem Edward Elric em um braço',
+  },
+  {
+    image: workImage4,
+    alt: 'Tatugem do personagem Shoyo Hinata em um braço',
+  },
+  {
+    image: workImage5,
+    alt: 'Tatugem do personagem Sailor Mars em um braço',
+  },
+  {
+    image: workImage6,
+    alt: 'Tatugem dos personagens Monkey D. Luffy e Trafalgar D. Water Law em um braço',
+  },
+  {
+    image: workImage7,
+    alt: 'Tatugem do personagem Naruto Uzumaki em um braço',
+  },
+  {
+    image: workImage8,
+    alt: 'Tatugem do personagem Haku em um braço',
+  },
+  {
+    image: workImage9,
+    alt: 'Tatugem do personagem Tobirama Senju em um braço',
+  },
+] as const
+
 function Gallery() {
   return (
     <section className="flex flex-col gap-10">
       <header className="flex flex-col items-center gap-2 md:flex-row md:items-end">
-        <h2 className="grow text-center text-3xl md:text-6xl">
+        <h2 className="grow text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
           Conheça o meu <span className="text-primary">trabalho</span>...
         </h2>
 
         <Button asChild variant="link">
           <Link href="https://www.instagram.com/mandytattoodf/" target="_blank">
-            <Icons.Instagram className="mr-2 inline" size="2rem" />
-            <span className="text-xl text-foreground md:text-2xl">
+            <Instagram className="mr-2 inline" size="2rem" />
+            <span className="text-xl text-foreground md:text-xl lg:text-2xl">
               @mandytattoodf
             </span>
           </Link>
         </Button>
       </header>
-      <div className="grid grid-cols-3 grid-rows-3 gap-6">
-        {/* TODO: adjust alts */}
-        {works.map((work) => (
+      <div className="grid grid-cols-3 grid-rows-3 gap-2 md:gap-6">
+        {galleryImages.map(({ image, alt }) => (
           <Image
             className="aspect-[9/10] w-full object-cover"
-            key={work}
-            src={work}
-            alt="..."
-            width={2861}
-            height={3603}
+            key={image.src}
+            src={image}
+            alt={alt}
+            sizes="30vw"
+            placeholder="blur"
           />
         ))}
       </div>
@@ -184,7 +244,7 @@ function Gallery() {
 function Testimonial() {
   return (
     <section className="flex flex-col items-center gap-10">
-      <h2 className="text-center text-3xl md:text-6xl">
+      <h2 className="w-full text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         O que estão <span className="text-primary">falando</span> sobre mim...
       </h2>
       <Slider />
@@ -200,22 +260,22 @@ function Testimonial() {
 
 function Bio() {
   return (
-    <section className="flex flex-col gap-4 md:flex-row">
-      <h2 className="text-center text-3xl md:hidden md:text-6xl">
+    <section className="flex flex-col gap-4 md:flex-row ">
+      <h2 className="text-center text-3xl md:hidden">
         Quem é a <span className="text-secondary">artista</span>?
       </h2>
       <Image
-        className="w-full object-cover md:w-4/12"
-        src="/mandy-bio-2.png"
-        alt="..."
-        width={1504}
-        height={1906}
+        className="max-h-screen w-full object-contain md:w-6/12 lg:w-4/12"
+        src={bioImage}
+        alt="Tatuadora Mandy"
+        sizes="(min-width: 768px) 35vw (min-width: 768px) 50vw, 100vw"
+        placeholder="blur"
       />
-      <div className="flex flex-col items-center justify-around gap-6 text-2xl">
-        <h2 className="hidden text-center text-3xl md:block md:text-6xl">
+      <div className="flex flex-col items-center justify-around gap-6 text-2xl md:w-6/12 lg:w-8/12">
+        <h2 className="hidden w-full text-3xl md:block md:text-4xl lg:text-5xl xl:text-6xl">
           Quem é a <span className="text-secondary">artista</span>?
         </h2>
-        <div className="flex flex-col gap-8 text-justify text-lg text-[#E2E1DD]">
+        <div className="flex flex-col gap-8 text-justify text-lg text-[#E2E1DD] xl:text-xl 2xl:text-2xl">
           <p>
             Prazer, <span className="italic">Mandy</span>!
           </p>
@@ -242,7 +302,7 @@ function Bio() {
             profissão esteja em boas mãos.
           </p>
         </div>
-        <Button className="h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white">
+        <Button className="h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white xl:text-xl 2xl:text-2xl">
           Entrar em contato
         </Button>
       </div>
@@ -252,12 +312,12 @@ function Bio() {
 
 function Budget() {
   return (
-    <section className="flex flex-col gap-4 md:flex-row">
-      <div className="flex flex-col items-center justify-around gap-6 text-2xl">
-        <h2 className="text-center text-3xl md:text-6xl">
+    <section id="orcamentos" className="flex flex-col gap-4 md:flex-row">
+      <div className="flex flex-col items-center justify-around gap-6 text-2xl md:w-6/12 lg:w-8/12">
+        <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
           Como fazer um <span className="text-primary">orçamento</span>?
         </h2>
-        <div className="flex flex-col gap-8 text-justify text-lg text-[#E2E1DD]">
+        <div className="flex flex-col gap-8 text-justify text-lg text-[#E2E1DD] xl:text-xl 2xl:text-2xl">
           <p>
             {/* TODO: add link */}O orçamento é realizado via Whatsapp, com a
             nossa querida Jess. Ela possui todo o conhecimento necessário para
@@ -281,16 +341,16 @@ function Budget() {
           </p>
         </div>
 
-        <Button className=" h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white">
+        <Button className=" h-16 w-64 border-2 bg-secondary p-4 text-lg font-bold text-[#060606] transition duration-300 hover:bg-[#060606] hover:text-white xl:text-xl 2xl:text-2xl">
           Fazer orçamento
         </Button>
       </div>
       <Image
-        className="w-full rounded-[2rem] object-cover md:w-4/12"
-        src="/mandy-orcamento.jpeg"
+        className="max-h-screen w-full rounded-[2rem] object-contain md:w-6/12 lg:w-4/12"
+        src={budgetImage}
         alt="Mandy realizando tatuagem em um braço"
-        width={750}
-        height={1114}
+        sizes="(min-width: 768px) 35vw (min-width: 768px) 50vw, 100vw"
+        placeholder="blur"
       />
     </section>
   )
@@ -299,7 +359,7 @@ function Budget() {
 function FAQ() {
   return (
     <section className="flex flex-col gap-4">
-      <h2 className="text-center text-3xl md:text-6xl">
+      <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
         Perguntas
         <span className="text-primary"> frequentes</span>
       </h2>

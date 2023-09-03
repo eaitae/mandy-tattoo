@@ -3,11 +3,13 @@ import Image from 'next/image'
 import { Slider } from './slider'
 import { Faq } from './faq'
 import Link from 'next/link'
+import { Navbar } from '@/components/navbar'
 
 export default function CursoPage() {
   return (
     <>
       <div className="flex h-fit w-full flex-col md:flex-row md:pl-4 2xl:pb-64">
+        <Navbar />
         <div className="p-8 text-center md:relative md:z-10 md:w-[50vw] md:pt-20 md:text-left lg:pl-20 xl:pl-40 2xl:pt-40">
           <h1 className="mb-8 text-[2rem] font-bold md:mb-2 md:text-[2.6rem] xl:mb-8 xl:text-[2.8rem] 2xl:text-[3.5rem]">
             Sua jornada como <span className="text-secondary">tatuador</span>{' '}

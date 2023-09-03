@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br" className="dark">
+    <html lang="pt-br" className="dark scroll-smooth">
       <body className={cn(ubuntu.className, 'w-screen max-w-full')}>
         {children}
       </body>
