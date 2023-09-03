@@ -21,13 +21,13 @@ export function Navbar({ children }: NavbarProps) {
   const pathname = usePathname()
 
   return (
-    <nav className="flex flex-col items-center justify-center gap-4 pt-4 md:flex-row-reverse md:items-start md:justify-around md:px-4 md:pt-16">
-      <ul className="flex flex-wrap justify-around uppercase md:justify-end md:gap-1">
+    <nav className="flex flex-col items-center justify-center pt-4 md:flex-row-reverse md:items-start md:justify-around md:px-4 md:pt-16">
+      <ul className="flex uppercase md:justify-end md:gap-1">
         {routes.map(({ path, name }) => (
           <li key={path}>
             <Button
               asChild
-              className={cn('hover:bg-primary lg:text-2xl', {
+              className={cn('hover:bg-primary text-[0.7rem] sm:text-[0.9rem] md:text-[1.2rem] 2xl:text-[1.3rem]', {
                 'underline underline-offset-8': path === pathname,
               })}
               variant="ghost"

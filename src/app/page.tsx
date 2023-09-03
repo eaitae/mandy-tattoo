@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 import { Button } from '@/components/ui/button'
 import { Navbar } from '@/components/navbar'
@@ -35,9 +37,9 @@ export default function Home() {
         <FAQ />
       </main>
 
-      <footer className="flex flex-col gap-10 pb-10 md:gap-16 md:px-16 lg:gap-20">
+      <footer className="flex flex-col gap-10 pb-10 md:gap-16 md:px-16 lg:gap-20 px-4">
         <div className="flex flex-col gap-6">
-          <h2 className="text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
             Nossa <span className="text-secondary">localização</span>
           </h2>
           <p className="text-lg xl:text-xl 2xl:text-2xl">
@@ -62,14 +64,15 @@ export default function Home() {
       />
       <Button
         asChild
-        className="fixed bottom-4 right-4 rounded-md bg-secondary p-2 text-[#060606] hover:bg-primary focus:outline-none focus:ring focus:ring-blue-200"
+        className="fixed bottom-4 text-[1.2rem] font-bold right-4 md:w-[16rem] md:h-[3rem] rounded-md bg-white p-2 text-[#060606] hover:bg-primary focus:outline-none focus:ring focus:ring-green-200"
       >
         <Link
           href="https://api.whatsapp.com/send?phone=556182525342&text=Oi!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
           target="_blank"
-          className="text- text-[#060606] hover:text-white"
+          className="text-[#060606] hover:text-white"
         >
-          Entrar em contato
+          <FontAwesomeIcon className='h-[1.6rem] md:pr-2 text-[#25D366]' icon={faWhatsapp} />
+          <span className='hidden md:block'>Entrar em contato</span>
         </Link>
       </Button>
     </div>
