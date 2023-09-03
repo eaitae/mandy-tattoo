@@ -5,7 +5,20 @@ import { Faq } from './faq'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 
-export default function CursoPage() {
+import mobileInkBackgroundImage from '@/assets/mandy-bg-mobile.png'
+import InkBackgroundImage from '@/assets/mandy-pink-ink-background.png'
+import inkImage from '@/assets/icone-ink.png'
+import dragonImage from '@/assets/icone-dragon.png'
+import machineIcon from '@/assets/icone-maquina.png'
+import bonusIcon from '@/assets/icone-bonus.png'
+import dotsBackgroundImage from '@/assets/dots-bg.png'
+import greenBackgroundImage from '@/assets/mandy-green-bg-mobile.png'
+import bioBackgroundImage from '@/assets/mandy-bio-1.png'
+import pinkBackgroundImage from '@/assets/mandy-pink-bg.png'
+import gokuBackgroundImage from '@/assets/decalque-goku.png'
+import gokuMoblieBackgroundImage from '@/assets/decalque-goku-mobile.png'
+
+export default function Curso() {
   return (
     <>
       <div>
@@ -16,14 +29,14 @@ export default function CursoPage() {
           <div className="p-8 text-center md:relative md:z-10 md:w-[50vw] md:pt-20 md:text-left lg:pl-20 xl:pl-40 2xl:pt-40">
             <h1 className="mb-8 text-[2rem] font-bold md:mb-2 md:text-[2.6rem] xl:mb-8 xl:text-[2.8rem] 2xl:text-[3.5rem]">
               Sua jornada como <span className="text-secondary">tatuador</span>{' '}
-              começa aqui.{' '}
+              começa aqui.
             </h1>
             <div className="flex md:hidden">
               <Image
-                src="/mandy-bg-mobile.png"
+                src={mobileInkBackgroundImage}
                 alt="Tatuadora Mandy segurando uma máquina de tatuagem"
-                height={470}
-                width={440}
+                sizes="(min-width: 768px) 0vw, 100vw"
+                priority
               />
             </div>
             <h3 className="pt-4 text-[1rem] md:text-[1.2rem] xl:text-[1.5rem]">
@@ -46,10 +59,10 @@ export default function CursoPage() {
           </div>
           <Image
             className="relative hidden h-screen w-full object-cover md:block"
-            src="/mandy-pink-ink-background.png"
+            src={InkBackgroundImage}
             alt="Tatuadora Mandy segurando uma máquina de tatuagem"
             fill
-            sizes="100vw"
+            sizes="(min-width: 768px) 100vw, 0vw"
             priority
           />
         </div>
@@ -57,9 +70,9 @@ export default function CursoPage() {
 
       <div className="relative flex h-fit w-full flex-col">
         <div className="flex flex-col justify-center space-x-4 md:flex-row md:px-40">
-          <div className="flex flex-col items-center justify-center p-8 md:h-full md:p-20">
+          <div className="flex flex-col items-center justify-center p-8 md:h-full md:p-10 lg:p-20">
             <Image
-              src="/icone-ink.png"
+              src={inkImage}
               alt="Desenho de três bisnagas de tinta para tatuagem"
               className="mb-4"
               width={150}
@@ -78,9 +91,9 @@ export default function CursoPage() {
             </p>
           </div>
 
-          <div className="flex h-full flex-col items-center justify-center p-8 md:p-20">
+          <div className="flex h-full flex-col items-center justify-center p-8 md:p-10 lg:p-20">
             <Image
-              src="/icone-dragon.png"
+              src={dragonImage}
               alt="Desenho de um dragão"
               className="mb-4"
               width={150}
@@ -99,9 +112,9 @@ export default function CursoPage() {
             </p>
           </div>
 
-          <div className="flex h-full flex-col items-center justify-center p-8 md:p-20">
+          <div className="flex h-full flex-col items-center justify-center p-8 md:p-10 lg:p-20">
             <Image
-              src="/icone-maquina.png"
+              src={machineIcon}
               alt="Desenho de uma máquina de tatuagem"
               className="mb-4"
               width={150}
@@ -121,7 +134,7 @@ export default function CursoPage() {
 
         <div className="flex flex-col items-center justify-center space-x-4 p-4 md:flex-row">
           <Image
-            src="/icone-bonus.png"
+            src={bonusIcon}
             alt="Icone de um presente"
             className="mb-4"
             width={150}
@@ -149,8 +162,8 @@ export default function CursoPage() {
           </Button>
         </div>
         <Image
-          className="relative -z-10 h-screen w-full object-cover"
-          src="/pontinhos-bg.png"
+          className="relative -z-10 max-h-[100vh] w-full object-cover"
+          src={dotsBackgroundImage}
           alt="Pontinhos verdes"
           fill
           sizes="100vw"
@@ -186,10 +199,10 @@ export default function CursoPage() {
           </p>
           <Image
             className="relative block md:hidden"
-            src="/mandy-green-bg-mobile.png"
+            src={greenBackgroundImage}
             alt="Tatuadora Mandy criando uma arte em seu tablet"
-            height={400}
-            width={380}
+            sizes="(min-width: 768px) 0vw, 100vw"
+            placeholder="blur"
           />
           <Button
             asChild
@@ -202,11 +215,11 @@ export default function CursoPage() {
           </Button>
         </div>
         <Image
-          className="relative hidden h-screen w-full object-cover md:block"
-          src="/mandy-green-ink-background.png"
+          className="relative -mt-20 hidden h-screen w-full object-contain md:block"
+          src={greenBackgroundImage}
           alt="Tatuadora Mandy criando uma arte em seu tablet"
-          fill
-          sizes="100vw"
+          sizes="(min-width: 768px) 70vw, 0vw"
+          placeholder="blur"
         />
       </div>
 
@@ -244,10 +257,10 @@ export default function CursoPage() {
           </h1>
           <div className="relative block flex-1 md:hidden">
             <Image
-              src="/mandy-bio-1.png"
+              src={bioBackgroundImage}
               alt="Tatuadora Mandy com fundo rosa e seu nome escrito: Amanda Assunção"
-              height={420}
-              width={400}
+              sizes="(min-width: 768px) 0vw, 100vw"
+              placeholder="blur"
             />
           </div>
           <p>
@@ -288,10 +301,10 @@ export default function CursoPage() {
 
         <div className="relative hidden flex-1 md:block">
           <Image
-            src="/mandy-bio-1.png"
+            src={bioBackgroundImage}
             alt="Tatuadora Mandy com fundo rosa e seu nome escrito: Amanda Assunção"
-            layout="fill"
-            objectFit="scale-down"
+            sizes="(min-width: 768px) 50vw, 0vw"
+            placeholder="blur"
           />
         </div>
       </div>
@@ -299,10 +312,11 @@ export default function CursoPage() {
       <div className="h-fit w-full px-8 pt-4 md:flex md:px-52 md:pt-20">
         <div className="relative hidden flex-1 pb-60 pt-60 sm:block">
           <Image
-            src="/mandy-pink-bg.png"
+            className="object-contain"
+            src={pinkBackgroundImage}
             alt="Mandy tatuando"
-            layout="fill"
-            objectFit="scale-down"
+            fill
+            sizes="(min-width: 768px) 50vw, 0vw"
           />
         </div>
 
@@ -312,10 +326,9 @@ export default function CursoPage() {
           </h1>
           <div className="relative sm:hidden">
             <Image
-              src="/mandy-pink-bg.png"
+              src={pinkBackgroundImage}
               alt="Mandy tatuando"
-              height={400}
-              width={370}
+              sizes="(min-width: 768px) 0vw, 100vw"
             />
           </div>
           <Faq />
@@ -330,10 +343,9 @@ export default function CursoPage() {
           </h1>
           <Image
             className="relative block md:hidden"
-            src="/decalque-goku-mobile.png"
+            src={gokuMoblieBackgroundImage}
             alt="Decalque de tatuagem do goku"
-            height={400}
-            width={320}
+            sizes="(min-width: 768px) 0vw, 100vw"
           />
           <h3 className="text-[1rem] lg:text-[1.1rem] 2xl:text-[1.3rem]">
             Quero que você vá <b>muito além do básico</b>: Irei te ensinar
@@ -358,10 +370,10 @@ export default function CursoPage() {
         </div>
         <Image
           className="relative hidden object-cover pr-20 pt-12 md:flex"
-          src="/decalque-goku.png"
+          src={gokuBackgroundImage}
           alt="Decalque de tatuagem do goku"
           fill
-          sizes="100vw"
+          sizes="(min-width: 768px) 100vw, 0vw"
         />
       </div>
     </>

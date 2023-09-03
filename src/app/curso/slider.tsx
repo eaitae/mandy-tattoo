@@ -10,6 +10,28 @@ import 'swiper/css/scrollbar'
 
 import styles from './slider.module.css'
 
+import alunoImage1 from '@/assets/aluno-1.png'
+import alunoImage2 from '@/assets/aluno-2.png'
+import alunoImage3 from '@/assets/aluno-3.png'
+import alunoImage4 from '@/assets/aluno-4.png'
+import alunoImage5 from '@/assets/aluno-5.png'
+import alunoImage6 from '@/assets/aluno-6.png'
+import alunoImage7 from '@/assets/aluno-7.png'
+import alunoImage8 from '@/assets/aluno-8.png'
+import alunoImage9 from '@/assets/aluno-9.png'
+
+const images = [
+  alunoImage1,
+  alunoImage2,
+  alunoImage3,
+  alunoImage4,
+  alunoImage5,
+  alunoImage6,
+  alunoImage7,
+  alunoImage8,
+  alunoImage9,
+]
+
 export function Slider() {
   return (
     <Swiper
@@ -18,81 +40,17 @@ export function Slider() {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide>
-        <Image
-          src="/aluno-1.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-2.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-3.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-4.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-5.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-6.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-7.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-8.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src="/aluno-9.png"
-          alt="Resultado de tatuagem feita por aluno da Mandy"
-          width={400}
-          height={550}
-        />
-      </SwiperSlide>
+      {images.map((image) => (
+        <SwiperSlide key={image.src}>
+          <Image
+            src={image}
+            alt="Resultado de tatuagem feita por aluno da Mandy"
+            width={400}
+            height={550}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   )
 }

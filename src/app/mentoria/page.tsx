@@ -84,6 +84,7 @@ export default function Mentoria() {
             alt="Banner redondo com foto da tatuadora Mandy e dois informativos: curso com 6 meses de assistência e com certificado digital"
             sizes="(min-width: 768px) 50vw, 0vw"
             fill
+            priority
           />
         </div>
       </div>
