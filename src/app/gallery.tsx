@@ -1,8 +1,9 @@
 'use client'
 
-import { Instagram } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -60,7 +61,7 @@ const images = [
 
 export function Gallery() {
   return (
-    <section className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10 md:px-12">
       <header className="flex flex-col items-center gap-2 md:flex-row md:items-end">
         <h2 className="grow text-center text-3xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
           Conheça o meu <span className="text-primary">trabalho</span>...
@@ -68,7 +69,7 @@ export function Gallery() {
 
         <Button asChild variant="link">
           <Link href="https://www.instagram.com/mandytattoodf/" target="_blank">
-            <Instagram className="mr-2 inline" size="2rem" />
+          <FontAwesomeIcon icon={faInstagram} className='h-[1.8rem] pr-2'/>
             <span className="text-xl text-foreground md:text-xl lg:text-2xl">
               @mandytattoodf
             </span>
