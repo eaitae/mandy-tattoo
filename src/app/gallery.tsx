@@ -1,7 +1,7 @@
 'use client'
 
 import { Instagram } from 'lucide-react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
@@ -21,8 +21,6 @@ import workImage6 from '@/assets/work-6.jpg'
 import workImage7 from '@/assets/work-7.jpg'
 import workImage8 from '@/assets/work-8.jpg'
 import workImage9 from '@/assets/work-9.jpg'
-import { useState } from 'react'
-import { cn } from '@/lib/utils'
 
 const images = [
   { image: workImage1, alt: 'Tatugem do personagem Tengen Uzui em um braço' },
