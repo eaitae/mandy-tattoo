@@ -26,8 +26,8 @@ export default function Curso() {
           <Navbar />
         </div>
         <div className="relative flex h-fit w-full flex-col md:flex-row md:pl-4 2xl:pb-64">
-          <div className="p-8 text-center md:relative md:z-10 md:w-[50vw] md:pt-20 md:text-left lg:pl-20 xl:pl-40 2xl:pt-40">
-            <h1 className="mb-8 text-[2rem] font-bold md:mb-2 md:text-[2.6rem] xl:mb-8 xl:text-[2.8rem] 2xl:text-[3.5rem]">
+          <div className="p-8 text-center md:relative md:z-10 md:w-[50vw] md:pt-28 md:text-left lg:pl-20 xl:pl-40 2xl:pt-40">
+            <h1 className="mb-8 text-[2rem] font-bold md:mb-2 md:text-[2.6rem] lg:mt-16 xl:mb-4 xl:mt-8 xl:text-[2.5rem] 2xl:text-[3.5rem]">
               Sua jornada como <span className="text-secondary">tatuador</span>{' '}
               começa aqui.
             </h1>
@@ -50,7 +50,7 @@ export default function Curso() {
             <Button
               asChild
               variant="outline"
-              className="mt-8 h-16 w-60 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white md:mt-20"
+              className="mt-8 h-16 w-60 border-2 border-secondary p-4 text-[1.4rem] font-bold text-secondary transition duration-300 hover:bg-secondary hover:text-white md:mt-12"
             >
               <Link href="https://ig.me/m/mentoriamandytattoo" target="_blank">
                 Quero ser tatuador!
@@ -171,11 +171,11 @@ export default function Curso() {
       </div>
 
       <div className="relative flex h-fit w-full flex-col pt-4 md:flex-row md:pt-0">
-        <div className="relative p-8 text-center md:z-10 md:w-[50vw] md:p-4 md:pl-40 md:pt-20 md:text-left">
-          <h1 className="mb-8 text-left text-[2rem] font-bold md:text-[3.5rem]">
+        <div className="relative p-8 text-center md:z-10 md:w-[70vw] md:p-4 md:pl-40 md:pt-20 md:text-left lg:pl-32">
+          <h1 className="mb-8 text-left text-[2rem] font-bold md:text-[2.4rem] xl:text-[2.5rem]">
             Se <span className="text-secondary">você</span>...
           </h1>
-          <ul className="list-disc pl-6 text-left text-[1.2rem]">
+          <ul className="list-disc pl-6 text-left text-[1.2rem] xl:pl-1">
             <li>Sonha em ser tatuador, mas não sabe como começar</li>
             <br />
             <li>
@@ -215,7 +215,7 @@ export default function Curso() {
           </Button>
         </div>
         <Image
-          className="relative -mt-20 hidden h-screen w-full object-contain md:block"
+          className="relative hidden h-screen w-full object-contain md:block md:h-fit xl:h-screen"
           src={greenBackgroundImage}
           alt="Tatuadora Mandy criando uma arte em seu tablet"
           sizes="(min-width: 768px) 70vw, 0vw"
@@ -224,7 +224,7 @@ export default function Curso() {
       </div>
 
       <div className="flex flex-col items-center justify-center space-y-8 p-8">
-        <h1 className="text-center text-[1.6rem] font-bold md:mx-40 md:px-20 md:text-[2.5rem]">
+        <h1 className="text-center text-[1.6rem] font-bold md:mx-40 md:px-20 md:text-[2rem]">
           Estes são alguns dos <span className="text-primary">resultados</span>{' '}
           dos meus alunos durante nosso curso:
         </h1>
@@ -249,9 +249,9 @@ export default function Curso() {
         </div>
       </div>
 
-      <div className="flex h-fit w-full flex-col pt-2 md:flex-row md:px-52 md:pt-20">
+      <div className="flex h-fit w-full flex-col pt-2 md:flex-row md:px-20 md:pt-20 xl:px-28">
         <div className="flex flex-1 flex-col space-y-4 p-8 text-justify">
-          <h1 className="text-center text-[2.2em] font-bold md:text-left md:text-[3rem]">
+          <h1 className="text-center text-[2.2em] font-bold md:text-left md:text-[2.6rem]">
             Quem é a <br />
             <span className="text-primary">sensei</span> ?
           </h1>
@@ -309,7 +309,7 @@ export default function Curso() {
         </div>
       </div>
 
-      <div className="h-fit w-full px-8 pt-4 md:flex md:px-52 md:pt-20">
+      <div className="h-fit w-full px-8 pt-4 md:flex md:px-24 md:pt-20">
         <div className="relative hidden flex-1 pb-60 pt-60 sm:block">
           <Image
             className="object-contain"
@@ -335,8 +335,8 @@ export default function Curso() {
         </div>
       </div>
 
-      <div className="relative h-fit w-full text-center md:text-left">
-        <div className="relative p-8 md:z-10 md:w-[50vw] md:p-4 md:pl-40 md:pt-40">
+      <div className="relative mb-8 h-fit w-full text-center md:text-left">
+        <div className="relative p-8 md:z-10 md:w-[50vw] md:p-4 md:pl-40 md:pt-16">
           <h1 className="mb-2 text-[2rem] font-bold md:mb-8 lg:text-[2.4rem] 2xl:text-[3.5rem]">
             Torne-se um <span className="text-secondary">tatuador</span>{' '}
             completo!
