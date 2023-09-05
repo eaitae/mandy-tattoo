@@ -22,6 +22,8 @@ import bioImage from '@/assets/mandy-bio-2.png'
 import budgetImage from '@/assets/mandy-orcamento.jpeg'
 import { Gallery } from './gallery'
 
+export const dynamic = 'force-static'
+
 export default function Home() {
   return (
     <div className="flex w-full flex-col gap-10 md:gap-16 lg:gap-20">

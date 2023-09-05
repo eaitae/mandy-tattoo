@@ -41,6 +41,8 @@ const bottomIcons = [
   },
 ] as const
 
+export const dynamic = 'force-static'
+
 export default function Mentoria() {
   return (
     <>

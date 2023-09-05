@@ -77,6 +77,7 @@ export function Gallery() {
             key={image.src}
             src={image}
             alt={alt}
+            sizes="30vw"
           />
         ))}
       </div>

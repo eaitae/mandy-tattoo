@@ -18,6 +18,8 @@ import pinkBackgroundImage from '@/assets/mandy-pink-bg.png'
 import gokuBackgroundImage from '@/assets/decalque-goku.png'
 import gokuMoblieBackgroundImage from '@/assets/decalque-goku-mobile.png'
 
+export const dynamic = 'force-static'
+
 export default function Curso() {
   return (
     <>
