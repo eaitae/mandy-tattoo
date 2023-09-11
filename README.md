@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mandy Tattoo Professional Website
+
+Welcome to the repository for the Mandy Tattoo Studio. This project has been developed using Next.js, a React framework, and styled with the utility-first framework, Tailwind CSS. I personally crafted all the copywriting and design to ensure a cohesive and authentic feel throughout the project.
+
+## Features
+
+1. **Responsive Design**: The landing page is fully responsive across all device sizes.
+2. **Original Copywriting**: Every word is meticulously chosen and crafted by me.
+3. **Unique Design**: The design of the landing page was made by me exclusively for this project. 
+5. **SEO Optimized**: Harnessing the power of Next.js, the landing page is search engine friendly.
+
+## Live Website
+
+The project has been deployed using Vercel and is accessible at [https://mandytattoo.com.br/](https://mandytattoo.com.br/).
+
+## Copyrights
+
+All design elements and text presented in this project are original creations by me. Unauthorized use, reproduction, or distribution of the design or content without explicit permission is strictly prohibited. Please respect the hard work and creativity that has been poured into this project. If you wish to use or reference any part of this project, kindly reach out for permission.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- Node.js
+- pnpm (Install it globally with `npm install -g pnpm`)
+
+### Installation
+
+1. Clone this repository:
+
+```
+git clone https://github.com/eaitae/mandy-tattoo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate into the project directory:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+cd mandy-tattoo
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Install the dependencies using pnpm:
 
-## Learn More
+```
+pnpm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+pnpm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Visit `http://localhost:3000` in your browser to view the landing page locally!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/)
+
+---
+
+Thank you for visiting this repository. If you like what you see, consider giving it a star!
